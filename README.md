@@ -29,6 +29,8 @@ English · **[简体中文](#zh)**
 | Project | What it does | Badges |
 |---|---|---|
 | 📊 **[opencode-skill-tracker](https://github.com/SHADE-glitch/opencode-skill-tracker)** | OpenCode plugin + TUI that records skill / MCP / plugin tool usage into a local SQLite database. **No network, no message bodies.** | ![OpenCode](https://img.shields.io/badge/OpenCode-1.18.x-blue?style=flat-square) ![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
+| 🐾 **[codebuddy-usage-tracker](https://github.com/SHADE-glitch/codebuddy-usage-tracker)** | 👀 See how you actually use CodeBuddy: every 🧰 tool, 🎯 skill, 🤖 agent, 🧩 plugin and 🔌 MCP tool in a 📊 7-tab TUI. **No network, no message bodies.** | ![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white) ![SQLite](https://img.shields.io/badge/storage-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
+| 🧠 **[AgentOS](https://github.com/SHADE-glitch/AgentOS)** | 🛡️ External evidence + governance layer for coding agents: observations → ✅ verdict → 🙋 human gate → 🧬 durable memory. **Zero third-party deps, never edits code.** | ![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-v5-informational?style=flat-square&logo=sqlite&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
 | 🔔 **[notification-grouper](https://github.com/SHADE-glitch/notification-grouper)** | GNOME Shell 50 extension that folds notifications from the same app into one stack. Zero-config. | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-50-blue?style=flat-square) |
 
 ### 🪞 GNOME extension maintenance forks
@@ -41,6 +43,13 @@ Keep the upstream feature set, fix latent crashes, leaks and power issues.
 | 📋 **[copyous](https://github.com/SHADE-glitch/copyous)** | Copyous | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square) |
 | 🍎 **[macos-dock](https://github.com/SHADE-glitch/macos-dock)** | MacOSDock + macos-genie | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT%20%2B%20GPL--2.0--or--later-green?style=flat-square) |
 | 🌐 **[fast-translate](https://github.com/SHADE-glitch/fast-translate)** | translate-assistant | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
+
+## 📚✨ Learning notes & 📝 resume
+
+| Project | What it does | Access |
+|---|---|---|
+| 📚 **[Notes](https://github.com/SHADE-glitch/Notes)** | 🔥 Interview-oriented notebook: ☕ Java backend (16 modules · 99 posts) + 🤖 AI apps (11 dirs · 41 posts), 🎯 S / A / B / C tiers with 🗺️ roadmaps. | 🔒 *private — study base for interviews* |
+| 🧾 **[resume](https://github.com/SHADE-glitch/resume)** | 🏗️ Resume as engineering: 📄 sources, ✅ evidence, 🎨 layout, 🤖 build all versioned. Every 📕 PDF is traceable. | 🔒 *private — PDFs sent with applications* |
 
 ## 🧪 Tech
 
@@ -83,6 +92,8 @@ Keep the upstream feature set, fix latent crashes, leaks and power issues.
 | 项目 | 做什么 | 标签 |
 |---|---|---|
 | 📊 **[opencode-skill-tracker](https://github.com/SHADE-glitch/opencode-skill-tracker)** | OpenCode 插件 + TUI，把 skill / MCP / 插件工具的使用记录到本地 SQLite。**无网络、不记录消息正文。** | ![OpenCode](https://img.shields.io/badge/OpenCode-1.18.x-blue?style=flat-square) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
+| 🐾 **[codebuddy-usage-tracker](https://github.com/SHADE-glitch/codebuddy-usage-tracker)** | 👀 看清你是怎么用 CodeBuddy 的：🧰 工具、🎯 skill、🤖 agent、🧩 插件、🔌 MCP 全记录，📊 七个 Tab 一眼看完。**无网络、不记正文。** | ![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
+| 🧠 **[AgentOS](https://github.com/SHADE-glitch/AgentOS)** | 🛡️ 给写码 Agent 的外部证据与治理层：观察 → ✅ verdict → 🙋 人工确认 → 🧬 长效记忆。**零第三方依赖，绝不改代码。** | ![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
 | 🔔 **[notification-grouper](https://github.com/SHADE-glitch/notification-grouper)** | GNOME Shell 50 扩展，把同一应用的通知折叠成一个堆叠，零配置。 | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-50-blue?style=flat-square) |
 
 #### 🪞 GNOME 扩展维护分支
@@ -95,6 +106,13 @@ Keep the upstream feature set, fix latent crashes, leaks and power issues.
 | 📋 **[copyous](https://github.com/SHADE-glitch/copyous)** | Copyous | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square) |
 | 🍎 **[macos-dock](https://github.com/SHADE-glitch/macos-dock)** | MacOSDock + macos-genie | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT%20%2B%20GPL--2.0--or--later-green?style=flat-square) |
 | 🌐 **[fast-translate](https://github.com/SHADE-glitch/fast-translate)** | translate-assistant | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
+
+### 📚✨ 学习笔记与 📝 简历
+
+| 项目 | 做什么 | 可见性 |
+|---|---|---|
+| 📚 **[Notes](https://github.com/SHADE-glitch/Notes)** | 🔥 面试导向笔记本：☕ Java 后端（16 模块 · 99 篇）+ 🤖 AI 应用（11 目录 · 41 篇），🎯 S / A / B / C 分级 + 🗺️ 学习路线。 | 🔒 *（私有仓库，面试知识库）* |
+| 🧾 **[resume](https://github.com/SHADE-glitch/resume)** | 🏗️ 简历工程化：📄 源文件、✅ 证据、🎨 版式、🤖 构建全进版本控制，每份 📕 PDF 都可追溯。 | 🔒 *（私有仓库，随投递发送）* |
 
 ### 🧪 技术栈
 
