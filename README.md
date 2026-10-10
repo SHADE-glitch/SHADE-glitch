@@ -7,9 +7,9 @@
 **CS undergrad** · building ☕ Java backend & 🤖 AI applications, maintaining 🪞 GNOME Shell extensions, and writing 🧰 small dev tools.
 
 [![GitHub followers](https://img.shields.io/github/followers/SHADE-glitch?style=flat-square&logo=github&label=Follow&color=181717)](https://github.com/SHADE-glitch?tab=followers)
-![Ubuntu](https://img.shields.io/badge/running-Ubuntu%2026.04%20/%20GNOME%2050-E95420?style=flat-square&logo=ubuntu&logoColor=white)
-![Focus](https://img.shields.io/badge/focus-Java%20backend%20%2B%20AI%20applications-4479A1?style=flat-square&logo=openjdk&logoColor=white)
-![Languages](https://img.shields.io/badge/docs-English%20%7C%20简体中文-lightgrey?style=flat-square)
+[![Ubuntu](https://img.shields.io/badge/running-Ubuntu%2026.04%20/%20GNOME%2050-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
+[![Focus](https://img.shields.io/badge/focus-Java%20backend%20%2B%20AI%20applications-4479A1?style=flat-square&logo=openjdk&logoColor=white)](https://www.java.com/)
+[![Languages](https://img.shields.io/badge/docs-English%20%7C%20简体中文-lightgrey?style=flat-square)](#zh)
 
 English · **[简体中文](#zh)**
 
@@ -37,9 +37,9 @@ bilingual and maintained, not abandoned.
 
 | Project | What it does | Badges |
 |---|---|---|
-| 📊 **[opencode-skill-tracker](https://github.com/SHADE-glitch/opencode-skill-tracker)** | OpenCode plugin + TUI that records skill / MCP / plugin tool usage into a local SQLite database. **No network, no message bodies.** | ![OpenCode](https://img.shields.io/badge/OpenCode-1.18.x-blue?style=flat-square) ![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
-| 🐾 **[codebuddy-usage-tracker](https://github.com/SHADE-glitch/codebuddy-usage-tracker)** | 👀 See how you actually use CodeBuddy: every 🧰 tool, 🎯 skill, 🤖 agent, 🧩 plugin and 🔌 MCP tool in a 📊 7-tab TUI. **No network, no message bodies.** | ![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white) ![SQLite](https://img.shields.io/badge/storage-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
-| 🧠 **[AgentOS](https://github.com/SHADE-glitch/AgentOS)** | 🛡️ External evidence + governance layer for coding agents: observations → ✅ verdict → 🙋 human gate → 🧬 durable memory. **Zero third-party deps, never edits code.** | ![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-v5-informational?style=flat-square&logo=sqlite&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
+| 📊 **[opencode-skill-tracker](https://github.com/SHADE-glitch/opencode-skill-tracker)** | OpenCode plugin + TUI that records skill / MCP / plugin tool usage into a local SQLite database. **No network, no message bodies.** | [![OpenCode](https://img.shields.io/badge/OpenCode-1.18.x-blue?style=flat-square)](https://github.com/SHADE-glitch/opencode-skill-tracker) [![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/SHADE-glitch/opencode-skill-tracker) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/opencode-skill-tracker/blob/master/LICENSE) |
+| 🐾 **[codebuddy-usage-tracker](https://github.com/SHADE-glitch/codebuddy-usage-tracker)** | 👀 See how you actually use CodeBuddy: every 🧰 tool, 🎯 skill, 🤖 agent, 🧩 plugin and 🔌 MCP tool in a 📊 7-tab TUI. **No network, no message bodies.** | [![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/SHADE-glitch/codebuddy-usage-tracker) [![SQLite](https://img.shields.io/badge/storage-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)](https://github.com/SHADE-glitch/codebuddy-usage-tracker) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/codebuddy-usage-tracker/blob/master/LICENSE) |
+| 🧠 **[AgentOS](https://github.com/SHADE-glitch/AgentOS)** | 🛡️ External evidence + governance layer for coding agents: observations → ✅ verdict → 🙋 human gate → 🧬 durable memory. **Zero third-party deps, never edits code.** | [![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/SHADE-glitch/AgentOS) [![SQLite](https://img.shields.io/badge/SQLite-v5-informational?style=flat-square&logo=sqlite&logoColor=white)](https://github.com/SHADE-glitch/AgentOS) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/AgentOS/blob/master/LICENSE) |
 
 ### 🪞❄️ GNOME Shell extensions
 
@@ -47,26 +47,26 @@ bilingual and maintained, not abandoned.
 
 | Extension | Based on | GNOME Shell | License |
 |---|---|---|---|
-| 🔔 **[notification-grouper](https://github.com/SHADE-glitch/notification-grouper)** | *original* | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue?style=flat-square) |
-| 🔥 **[burn-my-windows](https://github.com/SHADE-glitch/burn-my-windows)** | Burn My Windows | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square) |
-| 📋 **[copyous](https://github.com/SHADE-glitch/copyous)** | Copyous | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square) |
-| 🍎 **[macos-dock](https://github.com/SHADE-glitch/macos-dock)** | MacOSDock + macos-genie | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT%20%2B%20GPL--2.0--or--later-green?style=flat-square) |
-| 🌐 **[fast-translate](https://github.com/SHADE-glitch/fast-translate)** | translate-assistant | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
+| 🔔 **[notification-grouper](https://github.com/SHADE-glitch/notification-grouper)** | *original* | [![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-50-blue?style=flat-square)](https://github.com/SHADE-glitch/notification-grouper) | [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue?style=flat-square)](https://github.com/SHADE-glitch/notification-grouper/blob/master/LICENSE) |
+| 🔥 **[burn-my-windows](https://github.com/SHADE-glitch/burn-my-windows)** | Burn My Windows | [![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square)](https://github.com/SHADE-glitch/burn-my-windows) | [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)](https://github.com/SHADE-glitch/burn-my-windows/blob/master/LICENSE) |
+| 📋 **[copyous](https://github.com/SHADE-glitch/copyous)** | Copyous | [![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square)](https://github.com/SHADE-glitch/copyous) | [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)](https://github.com/SHADE-glitch/copyous/blob/master/LICENSE) |
+| 🍎 **[macos-dock](https://github.com/SHADE-glitch/macos-dock)** | MacOSDock + macos-genie | [![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square)](https://github.com/SHADE-glitch/macos-dock) | [![License](https://img.shields.io/badge/license-MIT%20%2B%20GPL--2.0--or--later-green?style=flat-square)](https://github.com/SHADE-glitch/macos-dock/blob/master/LICENSE) |
+| 🌐 **[fast-translate](https://github.com/SHADE-glitch/fast-translate)** | translate-assistant | [![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square)](https://github.com/SHADE-glitch/fast-translate) | [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/fast-translate/blob/master/LICENSE) |
 
 ## 🧪 Tech I use
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)
-![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)
-![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript_GJS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![GNOME](https://img.shields.io/badge/GNOME_Shell-4FC3F7?style=flat-square&logo=gnome&logoColor=white)
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://www.java.com/)
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square)](https://spring.io/projects/spring-ai)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)](https://redis.io/)
+[![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)](https://www.rabbitmq.com/)
+[![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript_GJS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://gjs.guide/)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)](https://www.linux.org/)
+[![GNOME](https://img.shields.io/badge/GNOME_Shell-4FC3F7?style=flat-square&logo=gnome&logoColor=white)](https://www.gnome.org/)
 
 <a id="zh"></a>
 
@@ -103,9 +103,9 @@ bilingual and maintained, not abandoned.
 
 | 项目 | 做什么 | 标签 |
 |---|---|---|
-| 📊 **[opencode-skill-tracker](https://github.com/SHADE-glitch/opencode-skill-tracker)** | OpenCode 插件 + TUI，把 skill / MCP / 插件工具的使用记录到本地 SQLite。**无网络、不记录消息正文。** | ![OpenCode](https://img.shields.io/badge/OpenCode-1.18.x-blue?style=flat-square) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
-| 🐾 **[codebuddy-usage-tracker](https://github.com/SHADE-glitch/codebuddy-usage-tracker)** | 👀 看清你是怎么用 CodeBuddy 的：🧰 工具、🎯 skill、🤖 agent、🧩 插件、🔌 MCP 全记录，📊 七个 Tab 一眼看完。**无网络、不记正文。** | ![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
-| 🧠 **[AgentOS](https://github.com/SHADE-glitch/AgentOS)** | 🛡️ 给写码 Agent 的外部证据与治理层：观察 → ✅ verdict → 🙋 人工确认 → 🧬 长效记忆。**零第三方依赖，绝不改代码。** | ![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
+| 📊 **[opencode-skill-tracker](https://github.com/SHADE-glitch/opencode-skill-tracker)** | OpenCode 插件 + TUI，把 skill / MCP / 插件工具的使用记录到本地 SQLite。**无网络、不记录消息正文。** | [![OpenCode](https://img.shields.io/badge/OpenCode-1.18.x-blue?style=flat-square)](https://github.com/SHADE-glitch/opencode-skill-tracker) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/opencode-skill-tracker/blob/master/LICENSE) |
+| 🐾 **[codebuddy-usage-tracker](https://github.com/SHADE-glitch/codebuddy-usage-tracker)** | 👀 看清你是怎么用 CodeBuddy 的：🧰 工具、🎯 skill、🤖 agent、🧩 插件、🔌 MCP 全记录，📊 七个 Tab 一眼看完。**无网络、不记正文。** | [![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/SHADE-glitch/codebuddy-usage-tracker) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/codebuddy-usage-tracker/blob/master/LICENSE) |
+| 🧠 **[AgentOS](https://github.com/SHADE-glitch/AgentOS)** | 🛡️ 给写码 Agent 的外部证据与治理层：观察 → ✅ verdict → 🙋 人工确认 → 🧬 长效记忆。**零第三方依赖，绝不改代码。** | [![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/SHADE-glitch/AgentOS) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/AgentOS/blob/master/LICENSE) |
 
 ### 🪞❄️ GNOME Shell 扩展
 
@@ -113,11 +113,11 @@ bilingual and maintained, not abandoned.
 
 | 扩展 | 基于 | GNOME Shell | 许可证 |
 |---|---|---|---|
-| 🔔 **[notification-grouper](https://github.com/SHADE-glitch/notification-grouper)** | *原创* | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue?style=flat-square) |
-| 🔥 **[burn-my-windows](https://github.com/SHADE-glitch/burn-my-windows)** | Burn My Windows | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square) |
-| 📋 **[copyous](https://github.com/SHADE-glitch/copyous)** | Copyous | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square) |
-| 🍎 **[macos-dock](https://github.com/SHADE-glitch/macos-dock)** | MacOSDock + macos-genie | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT%20%2B%20GPL--2.0--or--later-green?style=flat-square) |
-| 🌐 **[fast-translate](https://github.com/SHADE-glitch/fast-translate)** | translate-assistant | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
+| 🔔 **[notification-grouper](https://github.com/SHADE-glitch/notification-grouper)** | *原创* | [![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-50-blue?style=flat-square)](https://github.com/SHADE-glitch/notification-grouper) | [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue?style=flat-square)](https://github.com/SHADE-glitch/notification-grouper/blob/master/LICENSE) |
+| 🔥 **[burn-my-windows](https://github.com/SHADE-glitch/burn-my-windows)** | Burn My Windows | [![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square)](https://github.com/SHADE-glitch/burn-my-windows) | [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)](https://github.com/SHADE-glitch/burn-my-windows/blob/master/LICENSE) |
+| 📋 **[copyous](https://github.com/SHADE-glitch/copyous)** | Copyous | [![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square)](https://github.com/SHADE-glitch/copyous) | [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)](https://github.com/SHADE-glitch/copyous/blob/master/LICENSE) |
+| 🍎 **[macos-dock](https://github.com/SHADE-glitch/macos-dock)** | MacOSDock + macos-genie | [![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square)](https://github.com/SHADE-glitch/macos-dock) | [![License](https://img.shields.io/badge/license-MIT%20%2B%20GPL--2.0--or--later-green?style=flat-square)](https://github.com/SHADE-glitch/macos-dock/blob/master/LICENSE) |
+| 🌐 **[fast-translate](https://github.com/SHADE-glitch/fast-translate)** | translate-assistant | [![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square)](https://github.com/SHADE-glitch/fast-translate) | [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/fast-translate/blob/master/LICENSE) |
 
 ## 🧪 技术栈
 
