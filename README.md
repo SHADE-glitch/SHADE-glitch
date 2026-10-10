@@ -88,6 +88,11 @@ bilingual and maintained, not abandoned.
 
 **计算机专业大三学生** · 主要写 ☕ Java 后端和 🤖 AI 应用，维护 🪞 GNOME Shell 扩展，也做一些 🧰 小工具。
 
+[![GitHub followers](https://img.shields.io/github/followers/SHADE-glitch?style=flat-square&logo=github&label=Follow&color=181717)](https://github.com/SHADE-glitch?tab=followers)
+[![Ubuntu](https://img.shields.io/badge/running-Ubuntu%2026.04%20/%20GNOME%2050-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
+[![Focus](https://img.shields.io/badge/focus-Java%20backend%20%2B%20AI%20applications-4479A1?style=flat-square&logo=openjdk&logoColor=white)](https://spring.io/)
+[![Languages](https://img.shields.io/badge/docs-English%20%7C%20简体中文-lightgrey?style=flat-square)](#en)
+
 **简体中文** · [English](#en)
 
 </div>
@@ -113,9 +118,9 @@ bilingual and maintained, not abandoned.
 
 | 项目 | 做什么 | 标签 |
 |---|---|---|
-| 📊 **[opencode-skill-tracker](https://github.com/SHADE-glitch/opencode-skill-tracker)** | OpenCode 插件 + TUI，把 skill / MCP / 插件工具的使用记录到本地 SQLite。**无网络、不记录消息正文。** | [![OpenCode](https://img.shields.io/badge/OpenCode-1.18.x-blue?style=flat-square)](https://github.com/SHADE-glitch/opencode-skill-tracker) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/opencode-skill-tracker/blob/master/LICENSE) |
-| 🐾 **[codebuddy-usage-tracker](https://github.com/SHADE-glitch/codebuddy-usage-tracker)** | 👀 看清你是怎么用 CodeBuddy 的：🧰 工具、🎯 skill、🤖 agent、🧩 插件、🔌 MCP 全记录，📊 七个 Tab 一眼看完。**无网络、不记正文。** | [![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/SHADE-glitch/codebuddy-usage-tracker) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/codebuddy-usage-tracker/blob/master/LICENSE) |
-| 🧠 **[AgentOS](https://github.com/SHADE-glitch/AgentOS)** | 🛡️ 给写码 Agent 的外部证据与治理层：观察 → ✅ verdict → 🙋 人工确认 → 🧬 长效记忆。**零第三方依赖，绝不改代码。** | [![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/SHADE-glitch/AgentOS) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/AgentOS/blob/master/LICENSE) |
+| 📊 **[opencode-skill-tracker](https://github.com/SHADE-glitch/opencode-skill-tracker)** | OpenCode 插件 + TUI，把 skill / MCP / 插件工具的使用记录到本地 SQLite。**无网络、不记录消息正文。** | [![OpenCode](https://img.shields.io/badge/OpenCode-1.18.x-blue?style=flat-square)](https://github.com/SHADE-glitch/opencode-skill-tracker) [![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/SHADE-glitch/opencode-skill-tracker) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/opencode-skill-tracker/blob/master/LICENSE) |
+| 🐾 **[codebuddy-usage-tracker](https://github.com/SHADE-glitch/codebuddy-usage-tracker)** | 👀 看清你是怎么用 CodeBuddy 的：🧰 工具、🎯 skill、🤖 agent、🧩 插件、🔌 MCP 全记录，📊 七个 Tab 一眼看完。**无网络、不记正文。** | [![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/SHADE-glitch/codebuddy-usage-tracker) [![SQLite](https://img.shields.io/badge/storage-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)](https://github.com/SHADE-glitch/codebuddy-usage-tracker) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/codebuddy-usage-tracker/blob/master/LICENSE) |
+| 🧠 **[AgentOS](https://github.com/SHADE-glitch/AgentOS)** | 🛡️ 给写码 Agent 的外部证据与治理层：观察 → ✅ verdict → 🙋 人工确认 → 🧬 长效记忆。**零第三方依赖，绝不改代码。** | [![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/SHADE-glitch/AgentOS) [![SQLite](https://img.shields.io/badge/SQLite-v5-informational?style=flat-square&logo=sqlite&logoColor=white)](https://github.com/SHADE-glitch/AgentOS) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/SHADE-glitch/AgentOS/blob/master/LICENSE) |
 
 ### 🪞❄️ GNOME Shell 扩展
 
