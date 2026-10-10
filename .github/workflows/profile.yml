@@ -20,5 +20,9 @@ jobs:
           node-version: "20"
       - name: Check the profile README (structure, mirror, links, visibility)
         env:
-          GH_TOKEN: ${{ github.token }}
+          # Visibility fallback for the private repos: a PAT (repo read) lets CI verify them too.
+          # If PROFILE_TOKEN is not set the secret is empty and this falls back to the default
+          # token, which can only see public repos — the private rows then report as "unverifiable",
+          # never dead. Set the secret to close that gap (see AGENTS.md).
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN || github.token }}
         run: node scripts/check-profile.mjs

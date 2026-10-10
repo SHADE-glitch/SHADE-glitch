@@ -88,6 +88,9 @@ authenticated and network; when they cannot run the guard **refuses to report a 
 `--offline` to skip them explicitly and loudly instead.
 
 **Automation.** `.github/workflows/profile.yml` runs the guard on every push and pull request, so a
-dead link or a mis-mirrored half cannot reach the front page. A CI token cannot see the two private
-repos, so there they are reported as *unverifiable* (not dead) — run the guard locally, as the owner,
-to verify them.
+dead link or a mis-mirrored half cannot reach the front page. A CI token cannot see private repos, so
+by default the two whitelisted rows are reported as *unverifiable* (not dead). **Visibility fallback:**
+add a repository secret **`PROFILE_TOKEN`** — a fine-grained PAT with read access to those two repos
+(`gh secret set PROFILE_TOKEN -R SHADE-glitch/SHADE-glitch`) — and CI verifies them exactly like a
+local run; without the secret the workflow falls back to the default token and checks everything
+public. Run the guard locally, as the owner, to verify the private pair either way.

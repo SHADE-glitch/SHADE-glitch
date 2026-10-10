@@ -86,7 +86,7 @@ if (OFFLINE) {
         } catch {
             if (PRIVATE_ALLOWED.has(r)) {
                 warnings.push(`"${r}" is not visible to this token — expected for a whitelisted ` +
-                    `private repo; verify it with the owner token`);
+                    `private repo; set the PROFILE_TOKEN CI secret (or run locally as the owner) to verify it`);
             } else {
                 fail(`links: github.com/${OWNER}/${r} does not resolve (deleted, renamed, or never pushed)`);
             }
