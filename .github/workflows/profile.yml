@@ -1,0 +1,24 @@
+name: profile
+
+# Guards the front page: a dead link, a half-mirrored README, or a private repo that slipped in
+# should never reach github.com/SHADE-glitch. See AGENTS.md and scripts/check-profile.mjs.
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check the profile README (structure, mirror, links, visibility)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/check-profile.mjs
