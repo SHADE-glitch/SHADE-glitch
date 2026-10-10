@@ -53,13 +53,6 @@ bilingual and maintained, not abandoned.
 | 🍎 **[macos-dock](https://github.com/SHADE-glitch/macos-dock)** | MacOSDock + macos-genie | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT%20%2B%20GPL--2.0--or--later-green?style=flat-square) |
 | 🌐 **[fast-translate](https://github.com/SHADE-glitch/fast-translate)** | translate-assistant | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
 
-### 📚 Notes & resume
-
-| Project | What it does | Access |
-|---|---|---|
-| 📚 **[Notes](https://github.com/SHADE-glitch/Notes)** | 🔥 Interview-oriented notebook: ☕ Java backend (16 modules · 99 posts) + 🤖 AI apps (11 dirs · 41 posts), 🎯 S / A / B / C tiers with 🗺️ roadmaps. | 🔒 *private — study base for interviews* |
-| 🧾 **[resume](https://github.com/SHADE-glitch/resume)** | 🏗️✍️ Resume workshop: crafting resumes from 📄 sources, ✅ evidence, 🎨 layout, 🤖 build — all versioned. Every 📕 PDF is reproducible from its commit. | 🔒 *private — where my resumes are made* |
-
 ## 🧪 Tech I use
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
@@ -125,13 +118,6 @@ bilingual and maintained, not abandoned.
 | 📋 **[copyous](https://github.com/SHADE-glitch/copyous)** | Copyous | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square) |
 | 🍎 **[macos-dock](https://github.com/SHADE-glitch/macos-dock)** | MacOSDock + macos-genie | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-48--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT%20%2B%20GPL--2.0--or--later-green?style=flat-square) |
 | 🌐 **[fast-translate](https://github.com/SHADE-glitch/fast-translate)** | translate-assistant | ![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-45--50-blue?style=flat-square) | ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) |
-
-### 📚 学习笔记 & 📝 简历
-
-| 项目 | 做什么 | 可见性 |
-|---|---|---|
-| 📚 **[Notes](https://github.com/SHADE-glitch/Notes)** | 🔥 面试导向笔记本：☕ Java 后端（16 模块 · 99 篇）+ 🤖 AI 应用（11 目录 · 41 篇），🎯 S / A / B / C 分级 + 🗺️ 学习路线。 | 🔒 *（私有仓库，面试知识库）* |
-| 🧾 **[resume](https://github.com/SHADE-glitch/resume)** | 🏗️✍️ 简历制作工坊：📄 源文件、✅ 证据、🎨 版式、🤖 构建全进版本控制，每份 📕 PDF 都能从提交复现。 | 🔒 *（私有仓库，我的简历在这里制作）* |
 
 ## 🧪 技术栈
 
