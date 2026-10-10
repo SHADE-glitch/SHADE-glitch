@@ -58,15 +58,23 @@ bilingual and maintained, not abandoned.
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://www.java.com/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square)](https://spring.io/projects/spring-ai)
+[![MyBatis](https://img.shields.io/badge/MyBatis-DC382D?style=flat-square)](https://mybatis.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)](https://redis.io/)
 [![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)](https://www.rabbitmq.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript_GJS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://gjs.guide/)
 [![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 [![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)](https://www.linux.org/)
 [![GNOME](https://img.shields.io/badge/GNOME_Shell-4FC3F7?style=flat-square&logo=gnome&logoColor=white)](https://www.gnome.org/)
+
+## 📈 GitHub stats
+
+[![Followers](https://img.shields.io/github/followers/SHADE-glitch?style=flat-square&logo=github&color=181717&label=Followers)](https://github.com/SHADE-glitch?tab=followers)
+[![Stars](https://img.shields.io/github/stars/SHADE-glitch?style=flat-square&logo=github&color=181717&label=Stars)](https://github.com/SHADE-glitch?tab=repositories)
 
 <a id="zh"></a>
 
@@ -121,4 +129,23 @@ bilingual and maintained, not abandoned.
 
 ## 🧪 技术栈
 
-Java · Spring Boot 3 · Spring AI · MySQL · Redis · RabbitMQ · Vue 3 · Python · JavaScript / GJS · SQLite · Linux · GNOME Shell
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://www.java.com/)
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square)](https://spring.io/projects/spring-ai)
+[![MyBatis](https://img.shields.io/badge/MyBatis-DC382D?style=flat-square)](https://mybatis.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)](https://redis.io/)
+[![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)](https://www.rabbitmq.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript_GJS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://gjs.guide/)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)](https://www.linux.org/)
+[![GNOME](https://img.shields.io/badge/GNOME_Shell-4FC3F7?style=flat-square&logo=gnome&logoColor=white)](https://www.gnome.org/)
+
+## 📈 GitHub 统计
+
+[![Followers](https://img.shields.io/github/followers/SHADE-glitch?style=flat-square&logo=github&color=181717&label=Followers)](https://github.com/SHADE-glitch?tab=followers)
+[![Stars](https://img.shields.io/github/stars/SHADE-glitch?style=flat-square&logo=github&color=181717&label=Stars)](https://github.com/SHADE-glitch?tab=repositories)
