@@ -1,7 +1,8 @@
 name: profile
 
-# Guards the front page: a dead link, a half-mirrored README, or a private repo that slipped in
-# should never reach github.com/SHADE-glitch. See AGENTS.md and scripts/check-profile.mjs.
+# Guards the front page: a dead link, a half-mirrored README, a private repo that slipped in, or an
+# AGENTS.md §6 index out of sync with the README should never reach github.com/SHADE-glitch.
+# See AGENTS.md and scripts/check-profile.mjs.
 on:
   push:
     branches: [master]
@@ -18,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Check the profile README (structure, mirror, links, visibility)
+      - name: Check the README + AGENTS.md (structure, mirror, links, visibility, index)
         env:
           # Visibility fallback for the private repos: a PAT (repo read) lets CI verify them too.
           # If PROFILE_TOKEN is not set the secret is empty and this falls back to the default
