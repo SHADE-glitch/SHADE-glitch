@@ -1,16 +1,18 @@
 # AGENTS.md — profile repo (`SHADE-glitch/SHADE-glitch`)
 
 Rules for maintaining the GitHub **profile README**. This repo is unlike every other repo on this
-machine: it ships a single file, and that file is a front page. It deliberately does **not** adopt
+machine: it ships no program — its one product is a front page. It deliberately does **not** adopt
 `STANDARD.md` — these rules are its own.
 
 ## 0. What this repo is
 
 - The **profile repo**: the repository name equals the account name, so GitHub renders its
-  `README.md` at `https://github.com/SHADE-glitch`. The only shipped file is `README.md`.
-- There is **no code, no build, no test runner, no CI**. It is the front page, so it is **first in
-  maintenance scope**: when any project changes (rename, public ↔ private, freeze, license,
-  description), update this file in the same round.
+  `README.md` at `https://github.com/SHADE-glitch`. `README.md` is the front page; the repo also
+  carries `AGENTS.md`, the guard `scripts/check-profile.mjs`, and the CI workflow that runs it.
+- There is **no app and no build** — just the README, its rules, and the guard that keeps them
+  honest. Because it is the front page, it is **first in maintenance scope**: when any project
+  changes (rename, public ↔ private, freeze, license, description), update this file in the same
+  round.
 
 ## 1. Hard boundaries
 

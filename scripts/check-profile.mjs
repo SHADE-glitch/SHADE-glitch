@@ -2,8 +2,9 @@
 /**
  * check-profile.mjs — guards the GitHub profile README (`SHADE-glitch/SHADE-glitch`).
  *
- * The repo ships a single file and has no CI, so a dead link or a half-edited README ships
- * silently to the front page. This is the one command that catches it first. Four checks:
+ * The front page is a single `README.md`, so a dead link or a half-edited copy would ship straight
+ * to github.com/SHADE-glitch. This is the command that catches it first — CI runs it on every push,
+ * and you can run it locally. Four checks:
  *
  *   1. structure — both HTML anchors (`<a id="en">`, `<a id="zh">`) and both switchers exist,
  *      so the page stays navigable and the two language halves stay delimited.
