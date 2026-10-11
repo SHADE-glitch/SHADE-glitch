@@ -81,11 +81,12 @@ Run the guard:
     node scripts/check-profile.mjs
 
 It fails on (a) a missing `#en`/`#zh` anchor or switcher, (b) a repo listed in one language half but
-not the other, (c) a `github.com/SHADE-glitch/…` link that does not resolve, and (d) a listed repo
+not the other, (c) a `github.com/SHADE-glitch/…` link that does not resolve, (d) a listed repo
 that is **not public** — the two whitelisted private repos are the only exception, and naming any
-*other* private repo is exactly what this check blocks. The link and visibility checks need `gh`
-authenticated and network; when they cannot run the guard **refuses to report a pass** — pass
-`--offline` to skip them explicitly and loudly instead.
+*other* private repo is exactly what this check blocks — and (e) an `AGENTS.md` §6 index whose repo
+set no longer equals the README's (see §6). Checks (a), (b) and (e) read only the two committed
+files; (c) and (d) need `gh` authenticated and network, and when they cannot run the guard **refuses
+to report a pass** — pass `--offline` to skip them explicitly and loudly instead.
 
 **Automation.** `.github/workflows/profile.yml` runs the guard on every push and pull request, so a
 dead link or a mis-mirrored half cannot reach the front page. A CI token cannot see private repos, so
@@ -118,3 +119,8 @@ authoritative rulebook:
 When a repo is **added to** or **removed from** this README, add or remove its reciprocal section in
 the same round — the pair is what keeps the obligation discoverable from either side. `resume` and
 `Notes` are **not** listed and carry no such section.
+
+`scripts/check-profile.mjs` enforces this table: its repo set must equal the README's (the local
+extension installs are written here with their `@local` suffix — the guard strips it to compare
+against the repo links). It verifies the **index**, not the sections themselves: those live in the
+other repos and are out of this repo's reach in CI.

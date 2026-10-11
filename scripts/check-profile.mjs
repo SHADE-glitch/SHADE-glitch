@@ -3,7 +3,7 @@
  * check-profile.mjs — guards the GitHub profile README (`SHADE-glitch/SHADE-glitch`).
  *
  * The repo ships a single file and has no CI, so a dead link or a half-edited README ships
- * silently to the front page. This is the one command that catches it first. Three checks:
+ * silently to the front page. This is the one command that catches it first. Four checks:
  *
  *   1. structure — both HTML anchors (`<a id="en">`, `<a id="zh">`) and both switchers exist,
  *      so the page stays navigable and the two language halves stay delimited.
@@ -12,6 +12,9 @@
  *   3. links     — every referenced repo resolves on GitHub (via `gh repo view`). If `gh` is
  *      missing or unauthenticated the check REFUSES to pass — a pass over an unverified set
  *      proves nothing. Pass `--offline` to skip it explicitly and loudly instead.
+ *   4. agents    — the reverse index in `AGENTS.md` §6 lists exactly the repos the README links:
+ *      the pair is what keeps the reciprocal obligation discoverable from either side. Needs only
+ *      the two committed files, so it runs everywhere (CI included).
  *
  *   node scripts/check-profile.mjs [--offline]
  */
@@ -97,6 +100,30 @@ if (OFFLINE) {
                 `one needs the owner's spoken approval AND a whitelist entry in this script`);
         }
     }
+}
+
+// ---- 4. AGENTS.md §6 reciprocal index --------------------------------------
+// §6 of AGENTS.md is the reverse index of the README's Projects: the same repos, listed the other
+// way round. The two must agree — a repo added to or removed from the README without the matching
+// edit here is exactly the drift §6's prose warns about. The local extension installs carry an
+// `@local` suffix (their GNOME UUID); normalize it away so the names line up with the repo links.
+const agents = readFileSync(path.join(ROOT, "AGENTS.md"), "utf8");
+const sec6At = agents.indexOf("## 6.");
+if (sec6At === -1) {
+    fail("agents: AGENTS.md has no `## 6.` section — the reciprocal index is gone");
+} else {
+    const after = agents.slice(sec6At);
+    const next = after.slice(1).search(/\n## /); // stop at the next top-level heading
+    const body = next === -1 ? after : after.slice(0, next + 1);
+    const indexed = new Set();
+    for (const line of body.split("\n")) {
+        const m = line.match(/^\|\s*`([^`]+)`\s*\|/); // the table's first column: `| \`repo\` | … |`
+        if (m) indexed.add(m[1].replace(/@local$/, ""));
+    }
+    // An index over an empty set is a fake green: no rows parsed is itself the failure.
+    if (indexed.size === 0) fail("agents: AGENTS.md §6 lists no repos — the check would be vacuous");
+    for (const r of all) if (!indexed.has(r)) fail(`agents: "${r}" is in the README but not in AGENTS.md §6`);
+    for (const r of indexed) if (!all.includes(r)) fail(`agents: "${r}" is in AGENTS.md §6 but not in the README`);
 }
 
 // ---- report ----------------------------------------------------------------
