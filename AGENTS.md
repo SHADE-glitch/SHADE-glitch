@@ -94,3 +94,27 @@ add a repository secret **`PROFILE_TOKEN`** — a fine-grained PAT with read acc
 (`gh secret set PROFILE_TOKEN -R SHADE-glitch/SHADE-glitch`) — and CI verifies them exactly like a
 local run; without the secret the workflow falls back to the default token and checks everything
 public. Run the guard locally, as the owner, to verify the private pair either way.
+
+## 6. Where the obligations live (the reciprocal sections)
+
+Every fact this README states about a project **originates in that project's own repo**, so the duty
+to keep it true is written there, not here. Each listed repo carries a **"Listed on the GitHub
+profile"** section in its `AGENTS.md` — a short obligation list that points back to this file as the
+authoritative rulebook:
+
+| Repo | Section |
+|---|---|
+| `opencode-skill-tracker` | `AGENTS.md` § Listed on the GitHub profile |
+| `codebuddy-usage-tracker` | `AGENTS.md` § Listed on the GitHub profile |
+| `AgentOS` | `AGENTS.md` § Listed on the GitHub profile |
+| `notification-grouper@local` | `AGENTS.md` § Listed on the GitHub profile |
+| `burn-my-windows@local` | `AGENTS.md` § Listed on the GitHub profile |
+| `copyous@local` | `AGENTS.md` § Listed on the GitHub profile |
+| `macos-dock@local` | `AGENTS.md` § Listed on the GitHub profile |
+| `fast-translate@local` | `AGENTS.md` § Listed on the GitHub profile |
+| `AI-Interview-Practice-and-Feedback-System` | `AGENTS.md` / `AGENTS.zh-CN.md` § Listed on the GitHub profile |
+| `Local-life-service-platform` | `AGENTS.md` / `AGENTS.zh-CN.md` § 7. Listed on the GitHub profile |
+
+When a repo is **added to** or **removed from** this README, add or remove its reciprocal section in
+the same round — the pair is what keeps the obligation discoverable from either side. `resume` and
+`Notes` are **not** listed and carry no such section.
