@@ -107,7 +107,7 @@ authoritative rulebook:
 
 | Repo | Section |
 |---|---|
-| `opencode-skill-tracker` | `AGENTS.md` § Listed on the GitHub profile |
+| `opencode-usage-tracker` | `AGENTS.md` § Listed on the GitHub profile |
 | `codebuddy-usage-tracker` | `AGENTS.md` § Listed on the GitHub profile |
 | `AgentOS` | `AGENTS.md` § Listed on the GitHub profile |
 | `notification-grouper@local` | `AGENTS.md` § Listed on the GitHub profile |
