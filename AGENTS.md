@@ -67,8 +67,6 @@ same access labels. Editing one half without the other is a defect (the guard be
   is a human check.)
 - **No third-party tracking badges.** Static shields.io-style badges only; no visitor counters or
   images from unknown hosts — they leak the referrer and can break silently.
-- "bilingual and maintained, not abandoned" is a **claim the README makes**. Only list repos that
-  actually carry bilingual docs and are maintained; removing a row is a normal edit, not a loss.
 - House style: emoji in headings, shields.io badges, tables — keep it scannable.
 
 ## 4. Commits
