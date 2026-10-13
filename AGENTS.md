@@ -113,8 +113,8 @@ authoritative rulebook:
 | `copyous@local` | `AGENTS.md` § Listed on the GitHub profile |
 | `macos-dock@local` | `AGENTS.md` § Listed on the GitHub profile |
 | `fast-translate@local` | `AGENTS.md` § Listed on the GitHub profile |
-| `AI-Interview-Practice-and-Feedback-System` | `AGENTS.md` / `AGENTS.zh-CN.md` § Listed on the GitHub profile |
-| `Local-life-service-platform` | `AGENTS.md` / `AGENTS.zh-CN.md` § 7. Listed on the GitHub profile |
+| `AI-Interview-Practice-and-Feedback-System` | `AGENTS.md` § Listed on the GitHub profile |
+| `Local-life-service-platform` | `AGENTS.md`  § Listed on the GitHub profile |
 
 When a repo is **added to** or **removed from** this README, add or remove its reciprocal section in
 the same round — the pair is what keeps the obligation discoverable from either side. `resume` and
