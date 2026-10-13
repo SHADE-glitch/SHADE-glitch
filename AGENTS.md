@@ -101,20 +101,20 @@ public. Run the guard locally, as the owner, to verify the private pair either w
 Every fact this README states about a project **originates in that project's own repo**, so the duty
 to keep it true is written there, not here. Each listed repo carries a **"Listed on the GitHub
 profile"** section in its `AGENTS.md` — a short obligation list that points back to this file as the
-authoritative rulebook:
+authoritative rulebook. A bilingual repo mirrors the same section in its `AGENTS.zh-CN.md`:
 
-| Repo | Section |
-|---|---|
-| `opencode-usage-tracker` | `AGENTS.md` § Listed on the GitHub profile |
-| `codebuddy-usage-tracker` | `AGENTS.md` § Listed on the GitHub profile |
-| `AgentOS` | `AGENTS.md` § Listed on the GitHub profile |
-| `notification-grouper@local` | `AGENTS.md` § Listed on the GitHub profile |
-| `burn-my-windows@local` | `AGENTS.md` § Listed on the GitHub profile |
-| `copyous@local` | `AGENTS.md` § Listed on the GitHub profile |
-| `macos-dock@local` | `AGENTS.md` § Listed on the GitHub profile |
-| `fast-translate@local` | `AGENTS.md` § Listed on the GitHub profile |
-| `AI-Interview-Practice-and-Feedback-System` | `AGENTS.md` § Listed on the GitHub profile |
-| `Local-life-service-platform` | `AGENTS.md`  § Listed on the GitHub profile |
+| Repo |
+|---|
+| `opencode-usage-tracker` |
+| `codebuddy-usage-tracker` |
+| `AgentOS` |
+| `notification-grouper@local` |
+| `burn-my-windows@local` |
+| `copyous@local` |
+| `macos-dock@local` |
+| `fast-translate@local` |
+| `AI-Interview-Practice-and-Feedback-System` |
+| `Local-life-service-platform` |
 
 When a repo is **added to** or **removed from** this README, add or remove its reciprocal section in
 the same round — the pair is what keeps the obligation discoverable from either side. `resume` and
