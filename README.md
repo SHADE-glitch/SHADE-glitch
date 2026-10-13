@@ -4,7 +4,7 @@
 
 # Hi, I'm SHADE-glitch 👋
 
-**CS undergrad** · building ☕ Java backend & 🤖 AI applications, maintaining 🪞 GNOME Shell extensions, and writing 🧰 small dev tools.
+**CS undergrad** 🧑‍💻 · building ☕ Java & 🍃 Spring Boot backend and 🤖 AI apps (RAG · agents) · maintaining 🪞 GNOME Shell extensions 🔔🔥📋🍎 · writing 🧰 small dev tools 📊🐾🧠 · on 🐧 Ubuntu / GNOME 50
 
 [![GitHub followers](https://img.shields.io/github/followers/SHADE-glitch?style=flat-square&logo=github&label=Follow&color=181717)](https://github.com/SHADE-glitch?tab=followers)
 [![Ubuntu](https://img.shields.io/badge/running-Ubuntu%2026.04%20/%20GNOME%2050-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
@@ -85,7 +85,7 @@ utilities that make my own daily workflow observable and a little faster.
 
 ## 你好，我是 SHADE-glitch 👋
 
-**计算机专业大三学生** · 主要写 ☕ Java 后端和 🤖 AI 应用，维护 🪞 GNOME Shell 扩展，也做一些 🧰 小工具。
+**计算机专业大三学生** 🧑‍💻 · 主要写 ☕ Java 与 🍃 Spring Boot 后端、🤖 AI 应用（RAG · Agent）· 维护 🪞 GNOME Shell 扩展 🔔🔥📋🍎 · 也做 🧰 小工具 📊🐾🧠 · 运行 🐧 Ubuntu / GNOME 50
 
 [![GitHub followers](https://img.shields.io/github/followers/SHADE-glitch?style=flat-square&logo=github&label=Follow&color=181717)](https://github.com/SHADE-glitch?tab=followers)
 [![Ubuntu](https://img.shields.io/badge/running-Ubuntu%2026.04%20/%20GNOME%2050-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
