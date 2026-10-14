@@ -6,9 +6,9 @@ machine: it ships no program — its one product is a front page. It deliberatel
 
 ## 0. What this repo is
 
-- The **profile repo**: the repository name equals the account name, so GitHub renders its
-  `README.md` at `https://github.com/SHADE-glitch`. `README.md` is the front page; the repo also
-  carries `AGENTS.md`, the guard `scripts/check-profile.mjs`, and the CI workflow that runs it.
+- The **profile repo**: the repository name equals the account name, so GitHub  renders its `README.md` at `https://github.com/SHADE-glitch`. `README.md` is the front page; the repo also
+  carries `AGENTS.md`, the guard `scripts/check-profile.mjs`, the CI workflow that runs it, and
+  `CHANGELOG.md` (the `D-###` ledger of changes to the page and the guard).
 - There is **no app and no build** — just the README, its rules, and the guard that keeps them
   honest. Because it is the front page, it is **first in maintenance scope**: when any project
   changes (rename, public ↔ private, freeze, license, description), update this file in the same
@@ -58,7 +58,9 @@ same access labels. Editing one half without the other is a defect (the guard be
   being true, the line that makes it changes with it.
 - **Badges must agree with the repo they point at**: the license badge equals that repo's `LICENSE`,
   the `GNOME Shell` badge equals `metadata.json`'s `shell-version`, and runtime badges equal the
-  declared floors. A badge that disagrees is a lie on the front page.
+  declared floors. A badge that disagrees is a lie on the front page. The guard checks the license
+  and `GNOME Shell` badges against each repo (see §5); runtime floors live in that repo's own docs,
+  so they stay a human check.
 - **Status must be honest.** A repo that is frozen, archived or upstream-frozen says so (the
   extensions section already does); never file one under "maintained".
 - **Do not contradict the GitHub profile chrome.** The page also shows a bio, social links and pinned
@@ -83,10 +85,13 @@ Run the guard:
 It fails on (a) a missing `#en`/`#zh` anchor or switcher, (b) a repo listed in one language half but
 not the other, (c) a `github.com/SHADE-glitch/…` link that does not resolve, (d) a listed repo
 that is **not public** — the two whitelisted private repos are the only exception, and naming any
-*other* private repo is exactly what this check blocks — and (e) an `AGENTS.md` §6 index whose repo
-set no longer equals the README's (see §6). Checks (a), (b) and (e) read only the two committed
-files; (c) and (d) need `gh` authenticated and network, and when they cannot run the guard **refuses
-to report a pass** — pass `--offline` to skip them explicitly and loudly instead.
+*other* private repo is exactly what this check blocks — (e) an `AGENTS.md` §6 index whose repo
+set no longer equals the README's (see §6), and (f) a **badge that disagrees with the repo it points
+at** — the license badge vs that repo's `LICENSE`, the `GNOME Shell` badge vs `metadata.json`'s
+`shell-version` (a repo whose license GitHub cannot pin down, like the dual-licensed `macos-dock`,
+is reported as unverifiable rather than wrong). Checks (a), (b) and (e) read only the two committed
+files; (c), (d) and (f) need `gh` authenticated and network, and when they cannot run the guard
+**refuses to report a pass** — pass `--offline` to skip them explicitly and loudly instead.
 
 **Automation.** `.github/workflows/profile.yml` runs the guard on every push and pull request, so a
 dead link or a mis-mirrored half cannot reach the front page. A CI token cannot see private repos, so
