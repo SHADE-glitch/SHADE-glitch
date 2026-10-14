@@ -16,6 +16,10 @@
  *   4. agents    — the reverse index in `AGENTS.md` §6 lists exactly the repos the README links:
  *      the pair is what keeps the reciprocal obligation discoverable from either side. Needs only
  *      the two committed files, so it runs everywhere (CI included).
+ *   5. badges    — a badge must agree with the repo it points at (AGENTS.md §3): the license badge
+ *      equals that repo's `LICENSE`, the `GNOME Shell` badge equals `metadata.json`'s
+ *      `shell-version`. Runtime badges equal declared floors, which only each repo's own docs
+ *      state, so those stay a human check. Needs `gh` + network; `--offline` skips it.
  *
  *   node scripts/check-profile.mjs [--offline]
  */
@@ -125,6 +129,76 @@ if (sec6At === -1) {
     if (indexed.size === 0) fail("agents: AGENTS.md §6 lists no repos — the check would be vacuous");
     for (const r of all) if (!indexed.has(r)) fail(`agents: "${r}" is in the README but not in AGENTS.md §6`);
     for (const r of indexed) if (!all.includes(r)) fail(`agents: "${r}" is in AGENTS.md §6 but not in the README`);
+}
+
+// ---- 5. badges agree with the repo they point at ----------------------------
+// §3: a badge that disagrees with the repo it points at is a lie on the front page. Two kinds are
+// machine-checkable from the repo itself — the license badge (its `LICENSE`) and the `GNOME Shell`
+// badge (`metadata.json`'s `shell-version`). shields.io encodes a badge path as `--` = literal `-`
+// and `-` = a space, so the token is decoded before it is compared with the expected text.
+const rowsFor = (r) => md.split("\n").filter((l) => l.includes(`github.com/${OWNER}/${r}`));
+const badgeTokens = (r, kind) => {
+    const re = kind === "license"
+        ? /img\.shields\.io\/badge\/license-([^?\s)]+)\?/g
+        : /img\.shields\.io\/badge\/GNOME%20Shell-([^?\s)]+)\?/g;
+    // The repo appears in both language halves, so the same badge token shows up twice; dedupe so a
+    // single wrong value is reported once. Two halves with different values still yield two tokens.
+    const out = new Set();
+    for (const line of rowsFor(r)) for (const m of line.matchAll(re)) out.add(m[1]);
+    return [...out];
+};
+const splitColor = (s) => { const i = s.lastIndexOf("-"); return i === -1 ? [s, ""] : [s.slice(0, i), s.slice(i + 1)]; };
+const decodeBadge = (t) => t.replace(/--/g, "\u0000").replace(/-/g, " ").replace(/\u0000/g, "-").replace(/%20/gi, " ").replace(/%2B/gi, "+");
+const SPDX_LICENSE = { "MIT": "MIT", "GPL-2.0": "GPL-2.0-or-later", "GPL-3.0": "GPL-3.0-or-later" };
+const ghStr = (args) => {
+    try { return execFileSync("gh", args, { encoding: "utf8" }).trim(); } catch { return null; }
+};
+
+if (OFFLINE) {
+    console.log("badge check: SKIPPED (--offline) — badges NOT verified");
+} else if (!ghUsable) {
+    console.log("badge check: SKIPPED — `gh` is not usable (the link check above already fails)");
+} else {
+    for (const r of all) {
+        const licenseBadges = badgeTokens(r, "license");
+        if (licenseBadges.length) {
+            const spdx = ghStr(["api", `repos/${OWNER}/${r}`, "--jq", ".license.spdx_id"]);
+            if (spdx === null) {
+                warnings.push(`"${r}": license badge not verified — the repo is not readable by this token`);
+            } else if (!(spdx in SPDX_LICENSE)) {
+                warnings.push(`"${r}": license is ${spdx} — the badge text cannot be derived from it, leaving it to the owner`);
+            } else {
+                for (const raw of licenseBadges) {
+                    const [token] = splitColor(raw);
+                    if (decodeBadge(token) !== SPDX_LICENSE[spdx])
+                        fail(`badge: "${r}" license badge reads "${decodeBadge(token)}" but the repo's LICENSE is ${spdx} ("${SPDX_LICENSE[spdx]}")`);
+                }
+            }
+        }
+        const shellBadges = badgeTokens(r, "shell");
+        if (shellBadges.length) {
+            const b64 = ghStr(["api", `repos/${OWNER}/${r}/contents/metadata.json`, "--jq", ".content"]);
+            let versions;
+            try { versions = JSON.parse(Buffer.from(b64.replace(/\s+/g, ""), "base64").toString("utf8"))["shell-version"]; }
+            catch { versions = undefined; }
+            if (!Array.isArray(versions) || versions.length === 0) {
+                warnings.push(`"${r}": GNOME Shell badge not verified — metadata.json unreadable or has no shell-version`);
+            } else {
+                const nums = [...new Set(versions.map(Number))].sort((a, b) => a - b);
+                const contiguous = nums.every((n, i) => i === 0 || n === nums[i - 1] + 1);
+                const want = nums.length === 1 ? String(nums[0]) : (contiguous ? `${nums[0]}-${nums[nums.length - 1]}` : null);
+                if (want === null) {
+                    warnings.push(`"${r}": shell-version ${nums.join(", ")} is not a contiguous range — the badge text cannot be derived`);
+                } else {
+                    for (const raw of shellBadges) {
+                        const [token] = splitColor(raw);
+                        if (decodeBadge(token) !== want)
+                            fail(`badge: "${r}" GNOME Shell badge reads "${decodeBadge(token)}" but metadata.json's shell-version is ${nums.join(", ")} ("${want}")`);
+                    }
+                }
+            }
+        }
+    }
 }
 
 // ---- report ----------------------------------------------------------------

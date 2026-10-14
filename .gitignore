@@ -1,0 +1,6 @@
+# OS / editor junk — this repo ships no build, so there is little else to ignore.
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
