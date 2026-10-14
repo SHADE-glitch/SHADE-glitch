@@ -52,3 +52,27 @@ Cost     该项需要 `gh` + 网络（与链接检查同一分支）；CI 用 `P
          runtime 徽章（Python 版本等）仍留人工检查——它写在各仓自己的文档里，范围之外。
 
 Commit   「chore: verify badges against each repo and ignore local junk」
+
+## D-003
+
+kind     guard
+
+Symptom  `AGENTS.md` 是本仓唯一的规则书（§0–§6：本仓是什么、硬边界、单文件双语例外、内容规则、
+         提交前缀、推送前怎么验、互指义务在哪），但守卫只查 README 与 `AGENTS.md` §6 的反向索引
+         ——**这个文件的骨架本身没人守**：删掉、清空或改号一个 `## N.` 小节，那条规则就静默消失。
+
+Change   `scripts/check-profile.mjs` 新增第 6 项「rulebook」：`AGENTS.md` 必须仍按顺序带有
+         `## 0.`–`## 6.` 七个小节，且每节下面有非空正文；缺节、空节、乱序都报。只看已提交的这
+         一个文件，不依赖 `gh` 或网络，所以 `--offline` 与 CI 里都照跑。`AGENTS.md` §5 的失败
+         清单同步加上 (g)。另：第 4 项找 §6 起点原来用 `indexOf("## 6.")`，§5 正文里会写出节号，
+         于是它锁到了**散文**而不是标题（实测报出 3 个「在 README 里但不在 §6」的假错），改行首锚定
+         的正则；本项里列小节也一律避开行首 `## `。
+
+Evidence 负向测试三项，逐项还原后 rc=0：① 删掉 `## 4. Commits` 标题 → 报缺节、rc=1；
+         ② 把 `## 5.` 的正文清空（只留标题）→ 报空节；③ 把 §4 与 §5 换位 → 报乱序。
+         还原后 `node scripts/check-profile.mjs` → `PROFILE: PASS`，rc=0。
+
+Cost     多一条要跟着本文件结构走的断言：以后重命名或重排 `AGENTS.md` 的小节，必须同一次提交里改
+         这里，否则守卫立刻红。这是刻意的——这份规则书正是这个仓的唯一产物。
+
+Commit   「chore: assert the AGENTS.md rulebook shape in the guard」

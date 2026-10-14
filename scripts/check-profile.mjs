@@ -4,7 +4,7 @@
  *
  * The front page is a single `README.md`, so a dead link or a half-edited copy would ship straight
  * to github.com/SHADE-glitch. This is the command that catches it first — CI runs it on every push,
- * and you can run it locally. Four checks:
+ * and you can run it locally. Six checks:
  *
  *   1. structure — both HTML anchors (`<a id="en">`, `<a id="zh">`) and both switchers exist,
  *      so the page stays navigable and the two language halves stay delimited.
@@ -20,6 +20,9 @@
  *      equals that repo's `LICENSE`, the `GNOME Shell` badge equals `metadata.json`'s
  *      `shell-version`. Runtime badges equal declared floors, which only each repo's own docs
  *      state, so those stay a human check. Needs `gh` + network; `--offline` skips it.
+ *   6. rulebook — `AGENTS.md` still has its `## 0.`–`## 6.` sections, in order, none emptied:
+ *      that file is the rulebook, and a section dropped in a later edit takes a rule with it
+ *      without anything else noticing. Reads only the committed file; runs everywhere.
  *
  *   node scripts/check-profile.mjs [--offline]
  */
@@ -113,7 +116,10 @@ if (OFFLINE) {
 // edit here is exactly the drift §6's prose warns about. The local extension installs carry an
 // `@local` suffix (their GNOME UUID); normalize it away so the names line up with the repo links.
 const agents = readFileSync(path.join(ROOT, "AGENTS.md"), "utf8");
-const sec6At = agents.indexOf("## 6.");
+// Line-anchored on purpose: §5's prose names the section numbers, so a bare `indexOf("## 6.")`
+// would lock onto prose instead of the heading and silently compare against the wrong slice.
+const sec6 = agents.match(/^## 6\.\s/m);
+const sec6At = sec6 ? sec6.index : -1;
 if (sec6At === -1) {
     fail("agents: AGENTS.md has no `## 6.` section — the reciprocal index is gone");
 } else {
@@ -197,6 +203,49 @@ if (OFFLINE) {
                     }
                 }
             }
+        }
+    }
+}
+
+// ---- 6. AGENTS.md keeps its shape -------------------------------------------
+// The seven numbered sections are this repo's rulebook on a page: what it is, its hard boundaries,
+// the one-file / two-language exception, the content rules, the commit prefixes, how to verify, and
+// where the reciprocal obligations live. A later edit that drops, empties or renumbers one of them
+// silently removes a rule — nothing else would notice, so the shape itself is asserted here. It
+// reads only the committed file, so unlike the `gh`-bound checks it runs everywhere, CI included.
+const REQUIRED_SECTIONS = [
+    "0. What this repo is",
+    "1. Hard boundaries",
+    "2. One file, two languages",
+    "3. Content rules",
+    "4. Commits",
+    "5. Verify before pushing",
+    "6. Where the obligations live",
+];
+if (agents.trim() === "") {
+    fail("rulebook: AGENTS.md is empty — the rules this repo runs on are gone");
+} else {
+    const heads = [...agents.matchAll(/^(## .+)$/gm)].map((m) => ({
+        title: m[1].replace(/^## /, "").trim(),
+        at: m.index,
+        len: m[0].length,
+    }));
+    const found = [];
+    for (const want of REQUIRED_SECTIONS) {
+        const hit = heads.find((h) => h.title.startsWith(want));
+        if (!hit) {
+            fail(`rulebook: AGENTS.md has no \`## ${want}\` section — a rule was removed with it`);
+            continue;
+        }
+        const next = heads.find((h) => h.at > hit.at);
+        const body = agents.slice(hit.at + hit.len, next ? next.at : agents.length);
+        // A heading with nothing under it is a section in name only.
+        if (body.trim() === "") fail(`rulebook: AGENTS.md \`## ${hit.title}\` is empty — a heading with no rule under it`);
+        found.push(hit);
+    }
+    for (let i = 1; i < found.length; i++) {
+        if (found[i].at <= found[i - 1].at) {
+            fail(`rulebook: AGENTS.md sections are out of order — \`${found[i].title}\` must come after \`${found[i - 1].title}\``);
         }
     }
 }

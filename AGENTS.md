@@ -86,12 +86,14 @@ It fails on (a) a missing `#en`/`#zh` anchor or switcher, (b) a repo listed in o
 not the other, (c) a `github.com/SHADE-glitch/…` link that does not resolve, (d) a listed repo
 that is **not public** — the two whitelisted private repos are the only exception, and naming any
 *other* private repo is exactly what this check blocks — (e) an `AGENTS.md` §6 index whose repo
-set no longer equals the README's (see §6), and (f) a **badge that disagrees with the repo it points
+set no longer equals the README's (see §6), (f) a **badge that disagrees with the repo it points
 at** — the license badge vs that repo's `LICENSE`, the `GNOME Shell` badge vs `metadata.json`'s
 `shell-version` (a repo whose license GitHub cannot pin down, like the dual-licensed `macos-dock`,
-is reported as unverifiable rather than wrong). Checks (a), (b) and (e) read only the two committed
-files; (c), (d) and (f) need `gh` authenticated and network, and when they cannot run the guard
-**refuses to report a pass** — pass `--offline` to skip them explicitly and loudly instead.
+is reported as unverifiable rather than wrong), and (g) an `AGENTS.md` that lost, emptied or
+renumbered one of its seven numbered sections (§0–§6) — this file *is* the rulebook, so its shape
+is asserted too. Checks (a), (b), (e) and (g) read only the two committed files; (c), (d) and (f) need
+`gh` authenticated and network, and when they cannot run the guard **refuses to report a pass** —
+pass `--offline` to skip them explicitly and loudly instead.
 
 **Automation.** `.github/workflows/profile.yml` runs the guard on every push and pull request, so a
 dead link or a mis-mirrored half cannot reach the front page. A CI token cannot see private repos, so
