@@ -2,7 +2,7 @@
 
 Rules for maintaining the GitHub **profile README**. This repo is unlike every other repo on this
 machine: it ships no program — its one product is a front page. It deliberately does **not** adopt
-`STANDARD.md` — these rules are its own.
+`~/.agents/standards/STANDARD.md` — these rules are its own.
 
 ## 0. What this repo is
 

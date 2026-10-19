@@ -76,3 +76,17 @@ Cost     多一条要跟着本文件结构走的断言：以后重命名或重�
          这里，否则守卫立刻红。这是刻意的——这份规则书正是这个仓的唯一产物。
 
 Commit   「chore: assert the AGENTS.md rulebook shape in the guard」
+
+## D-002
+
+kind     chore
+
+Symptom  The profile AGENTS.md cited the shared standard by bare STANDARD.md; this repo is not
+         governed by it, so the bare name was even less resolvable than elsewhere.
+
+Change   The reference carries the full ~/.agents/standards/STANDARD.md path.
+
+Evidence 2026-10-19: grep -n STANDARD.md AGENTS.md shows only the full path;
+         node scripts/check-profile.mjs reports PROFILE: PASS.
+
+Cost     None; wording only.
