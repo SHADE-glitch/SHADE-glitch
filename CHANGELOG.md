@@ -107,3 +107,19 @@ Change   README 中英两侧的 aut 行同步补上「卡片式 Dashboard」与�
 Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，12 个仓库链接，rc=0。
 
 Cost     无；只改一行文案与一个编号。
+
+## D-006
+
+kind     chore
+
+Symptom  `ocut` 这一轮的首页项目行还写着 `💵 a cost series`：那条按天成本曲线是 Dashboard 上的
+         一张趋势图，已随 Runtime 行一起删除——成本现在只以数字形式出现在面板与 Projects 板里，
+         「series」不再成立。同时三家追踪器与 `aut` 都改成了单一 Usage Total（不再打印 API Total），
+         项目行里没有任何一句与新口径冲突，但成本那半句已经过期。
+
+Change   README 中英两侧的 ocut 行把「成本曲线」改成「真实每步成本」，并注明 token 只有一个
+         usage total。仓库链接没有增删，双语镜像不变。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，12 个仓库链接，rc=0。
+
+Cost     无；只改一行文案。
