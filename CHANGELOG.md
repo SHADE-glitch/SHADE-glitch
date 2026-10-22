@@ -77,7 +77,7 @@ Cost     多一条要跟着本文件结构走的断言：以后重命名或重�
 
 Commit   「chore: assert the AGENTS.md rulebook shape in the guard」
 
-## D-002
+## D-004
 
 kind     chore
 
@@ -90,3 +90,20 @@ Evidence 2026-10-19: grep -n STANDARD.md AGENTS.md shows only the full path;
          node scripts/check-profile.mjs reports PROFILE: PASS.
 
 Cost     None; wording only.
+
+## D-005
+
+kind     chore
+
+Symptom  `aut` 这一轮的首页项目行落后于仓库：Dashboard 现在画成三张带边框的卡片（窗口 / 图 /
+         榜单），底栏也改成按 tab 变、只列当前页真能用的键。原来那句
+         `📈 a dashboard with window-over-window deltas — plus 🧭 a key that hands the terminal…`
+         两点都没说，项目行对不上现状。
+
+Change   README 中英两侧的 aut 行同步补上「卡片式 Dashboard」与「底栏只列当前页的键」，仓库链接
+         没有增删，双语镜像不变。另把重复占用的 `## D-002` 改成 `## D-004`：它在文件里是第 4 条，
+         编号被前一条重复用过一次。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，12 个仓库链接，rc=0。
+
+Cost     无；只改一行文案与一个编号。
