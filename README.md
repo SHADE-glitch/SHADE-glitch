@@ -21,7 +21,7 @@ English · **[简体中文](#zh)**
 
 I build things 🛠️ end to end and keep them maintained. Two directions: ☕ **backend / AI application
 engineering** (Java · Spring Boot · RAG · agent tool loops · async pipelines) and 🧰 **developer
-tooling** — a family of agent-usage trackers (📊 cbut · 🐾 ocut · 🎯 qcut · 🧮 aut), GNOME Shell
+tooling** — a family of agent-usage trackers (🧮 aut · 🐾 cbut · 📊 ocut · 🎯 qcut), GNOME Shell
 extensions and utilities that make my own daily
 workflow 🔭 observable and a little faster.
 
@@ -105,7 +105,7 @@ workflow 🔭 observable and a little faster.
 ## 🧭 我在做什么
 
 我喜欢把东西 🛠️ 从零做到能用，并且持续维护。两条主线：☕ **后端 / AI 应用工程**（Java · Spring Boot · RAG · Agent 工具循环 · 异步流水线）
-和 🧰 **开发者工具**——一整套 agent 用量追踪器（📊 cbut · 🐾 ocut · 🎯 qcut · 🧮 aut）、GNOME Shell
+和 🧰 **开发者工具**——一整套 agent 用量追踪器（🧮 aut · 🐾 cbut · 📊 ocut · 🎯 qcut）、GNOME Shell
 扩展和一些小工具，让我自己的工作流 🔭 可观测、再快一点。
 
 ## 📦 项目
