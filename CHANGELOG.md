@@ -123,3 +123,17 @@ Change   README 中英两侧的 ocut 行把「成本曲线」改成「真实每�
 Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，12 个仓库链接，rc=0。
 
 Cost     无；只改一行文案。
+
+## D-007
+
+kind     chore
+
+Symptom  `ocut` 那一行的版本徽章写着 `OpenCode-1.18.x`，而 `opencode-usage-tracker` 自己的 README
+         与 `docs/maintenance/compatibility.md` 声明支持 `1.18.x` **与** `2.x`——首页把已支持的上界
+         说小了一档，读者会以为 2.x 没被覆盖。
+
+Change   README 中英两侧的 ocut 徽章改为 `OpenCode-1.18.x | 2.x`。链接、仓库集合与双语镜像不变。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，12 个仓库链接，rc=0。
+
+Cost     无；只改一个徽章的文案。
