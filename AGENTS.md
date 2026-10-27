@@ -113,8 +113,8 @@ authoritative rulebook. A bilingual repo mirrors the same section in its `AGENTS
 | Repo |
 |---|
 | `all-usage-trackers` |
-| `codebuddy-usage-tracker` |
 | `opencode-usage-tracker` |
+| `codebuddy-usage-tracker` |
 | `qoder-cn-usage-tracker` |
 | `trae-cn-usage-tracker` |
 | `AgentOS` |

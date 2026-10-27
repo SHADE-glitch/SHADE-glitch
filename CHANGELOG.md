@@ -154,3 +154,22 @@ Change   README 中英两侧四条分支行统一以 `· 🧊 frozen at upstream
 Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，12 个仓库链接，rc=0。
 
 Cost     无；只改文案。
+
+---
+
+## D-009
+
+kind     taste
+
+Symptom  工具区四个追踪器的顺序是 aut → cbut → ocut → qcut → tcut，cbut 排在 ocut 前面。主人要求
+         改成 ocut → cbut → qcut → tcut：先看 OpenCode 那家，再是 CodeBuddy。顺序本身没有事实
+         错误，但首页是给人扫的，行的先后就是阅读顺序。
+
+Change   README 中英两侧的工具表把 `opencode-usage-tracker` 与 `codebuddy-usage-tracker` 两行
+         对调；其余行（`all-usage-trackers` 仍在最前，其后 qcut、tcut、AgentOS）与扩展节、应用
+         节未动。`AGENTS.md` §6 的互惠表按同一顺序对调，两处保持一一对应。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链接，rc=0。
+
+Cost     无；只改行的先后，链接、徽章与仓库集合都没动。守卫只比对仓库**集合**，不比顺序，所以
+         这条约束靠人对齐——§6 与本表同轮改动就是为了不留一处。
