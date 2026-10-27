@@ -137,3 +137,20 @@ Change   README 中英两侧的 ocut 徽章改为 `OpenCode-1.18.x | 2.x`。链�
 Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，12 个仓库链接，rc=0。
 
 Cost     无；只改一个徽章的文案。
+
+## D-008
+
+kind     chore
+
+Symptom  四个 GNOME 分支的冻结标记写法不一致：burn / copyous / macos 把版本放在行首括号里，
+         fast 只在行尾挂 `· 🧊 frozen at upstream v10` 且未说明自己是 fork；扩展节也没有说明
+         「冻结上游」不等于 GitHub 已归档，读者容易把两者混为一谈。
+
+Change   README 中英两侧四条分支行统一以 `· 🧊 frozen at upstream vX` / `· 🧊 冻结在上游 vX`
+         结尾，fast 行补上 `Fork of Fast Translate (translate-assistant)`；扩展节开头改为
+         「四个冻结上游的分支」，表后补一句「冻结只固定上游基线，本地修复继续，仓库没有归档」。
+         链接、仓库集合与徽章未动。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，12 个仓库链接，rc=0。
+
+Cost     无；只改文案。
