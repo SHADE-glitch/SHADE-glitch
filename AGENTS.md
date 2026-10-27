@@ -116,6 +116,7 @@ authoritative rulebook. A bilingual repo mirrors the same section in its `AGENTS
 | `codebuddy-usage-tracker` |
 | `opencode-usage-tracker` |
 | `qoder-cn-usage-tracker` |
+| `trae-cn-usage-tracker` |
 | `AgentOS` |
 | `notification-grouper@local` |
 | `burn-my-windows@local` |
