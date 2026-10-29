@@ -173,3 +173,25 @@ Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链�
 
 Cost     无；只改行的先后，链接、徽章与仓库集合都没动。守卫只比对仓库**集合**，不比顺序，所以
          这条约束靠人对齐——§6 与本表同轮改动就是为了不留一处。
+
+## D-010
+
+kind     chore
+
+Symptom  首页「Backend & AI applications」两行里，第一个项目还是 `AI-Interview-Practice-and-Feedback-System`，
+         而主人现在的两个面试项目是 `Local-life-service-platform` 与 `insight-agent`。同一处还有第二
+         个问题：这两行都写着 `🔒 private — code available on request`，但两个仓现在都已经是**公开仓**，
+         那句承诺不再成立——首页在说一件已经不真的事。
+
+Change   README 中英两侧把 `AI-Interview` 行换成 `insight-agent` 行（行内徽章按该仓技术栈重写：
+         Spring Boot 3.5 / Spring AI / PostgreSQL 16 / pgvector / Vue 3），并删掉 `Local-life` 行末尾的
+         私有标记。`AGENTS.md` §1 的「Public repositories only」段落随之改写：两个被点名的后端项目现在
+         都是公开仓，原先为它们保留的私有例外不再需要；§6 的互惠表把 `AI-Interview` 换成 `insight-agent`，
+         与 README 的仓库集合保持一一对应。`AI-Interview` 仓本身未删除、未改动，只是不再出现在首页。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链接，rc=0。首次运行报
+         `agents: "insight-agent" is in the README but not in AGENTS.md §6` 与反向的一条，改完 §6 后通过。
+
+Cost     首页少了一个已完结的项目，多了一个仍在开发中的项目——后者的 README 与指标还会变，§6 的互惠
+         义务因此从「已冻结」变成「活文档」。守卫只比对集合，不比对行的顺序与描述文字，描述与徽章的
+         准确性仍靠人核对。

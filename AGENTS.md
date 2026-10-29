@@ -26,13 +26,11 @@ machine: it ships no program — its one product is a front page. It deliberatel
 - **Identity ceiling.** "CS undergrad" is the finest granularity allowed: never add a school,
   graduation year, city, age, photo, email or phone number. Anything more specific needs the owner's
   explicit approval first.
-- **Public repositories only.** The profile lists **public** repos. The only privately-visible repos
-  it may name are the two already listed — `AI-Interview-Practice-and-Feedback-System` and
-  `Local-life-service-platform` (kept as `🔒 private — code available on request`) — because the owner
-  chose to disclose those. **Every other private repo is off-limits: naming one (or its existence,
-  description, or stack beyond what is already public) requires the owner's explicit spoken approval
-  first.** Never flip a repo to public just so it can be listed — that is a privacy decision, not a
-  profile edit.
+- **Public repositories only.** The profile lists **public** repos. The two backend / AI projects it
+  names (`Local-life-service-platform` and `insight-agent`) are public. **Every private repo is
+  off-limits: naming one (or its existence, description, or stack beyond what is already public)
+  requires the owner's explicit spoken approval first.** Never flip a repo to public just so it can be
+  listed — that is a privacy decision, not a profile edit.
 
 ## 2. One file, two languages (this repo's exception)
 
@@ -123,8 +121,8 @@ authoritative rulebook. A bilingual repo mirrors the same section in its `AGENTS
 | `copyous@local` |
 | `macos-dock@local` |
 | `fast-translate@local` |
-| `AI-Interview-Practice-and-Feedback-System` |
 | `Local-life-service-platform` |
+| `insight-agent` |
 
 When a repo is **added to** or **removed from** this README, add or remove its reciprocal section in
 the same round — the pair is what keeps the obligation discoverable from either side. `resume` and
