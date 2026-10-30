@@ -256,3 +256,20 @@ Evidence 改前：新 camo 链接 → `504 Error Fetching Resource`（`Error Fet
 
 Cost     徽章不再显示关注数（当前 2）。统计区那两枚 Followers / Stars 仍是 API 徽章，同样可能在 camo 侧
          504——它们目前靠已有缓存显示，将来断了就用同一办法换成静态徽章。
+
+## D-014
+
+kind     fix
+
+Symptom  D-013 换成静态 shields 徽章后，新地址的 camo 链接仍然 504；再查同页早已缓存过的 Ubuntu 徽章，camo 同样
+         返回 504。这次抓到的三个 camo 链接全部失败，说明 GitHub 的 camo 这一侧取不到 `img.shields.io`，
+         任何**新**的 shields 图片都会断，只有历史上缓存过的还能显示——「同页只坏一张」看起来随机，根因在这里。
+
+Change   Follow 徽章改成仓库内自托管的 `assets/follow.svg`（126×20，flat-square 双段：#555 Follow / #181717
+         SHADE-glitch），README 用相对路径引用，中英两侧各一处。图片由 GitHub 自己托管，不再经过第三方。
+
+Evidence 改前：新静态 shields 地址的 camo → 504；已缓存的 Ubuntu 徽章 camo → 504；`curl` shields 直连 → 200，
+         `time_total` 0.64s，即本机可达、GitHub 侧取不到。`node scripts/check-profile.mjs` → `PROFILE: PASS`。
+
+Cost     徽章不再显示关注数，也不再随 shields 样式更新。其余 shields 徽章仍是外链，camo 侧取不到时同样会断，
+         届时可按同一办法逐个自托管。
