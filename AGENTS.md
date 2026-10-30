@@ -41,6 +41,8 @@ visitor lands on and the Chinese half sits one click away.
 - `README.zh-CN.md` — Chinese, opened by the same switcher.
 - Each switcher links to the **other file** (`README.zh-CN.md` / `README.md`). There are no `#en` /
   `#zh` anchors: the pair is two files now, not two halves of one.
+- The switcher appears **once per file, top-right**. The body carries no second copy — no in-body
+  `English · 简体中文` line and no `Languages` badge; one switch, one place.
 
 **The two files are one document and must stay mirrored** — same projects, same order, same links,
 same access labels. Editing one without the other is a defect (the guard below catches it).

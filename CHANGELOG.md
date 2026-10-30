@@ -305,3 +305,18 @@ Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链�
 
 Cost     个人页只渲染 `README.md`，首页看到的是英文版，中文版要多点一次（切换链接在首行）。旧锚点 `#zh` / `#en`
          失效，外部若有人链到它们会落到页首。
+
+## D-017
+
+kind     chore
+
+Symptom  D-016 拆成两份之后，语言切换出现在三个地方：右上角一行、页内 `English · 简体中文`、以及徽章行里的
+         `docs-English | 简体中文` 徽章。同一个动作三个入口，页面顶部显吵；徽章那枚还会跟着 shields 一起断图。
+
+Change   两份文件都只保留右上角切换（`<p align="right">`），删掉页内那行与 Languages 徽章，徽章行只剩 Ubuntu / Focus。
+         AGENTS.md §2 补一条「切换每份文件只出现一次、固定在右上角，正文不放第二份」。守卫的结构检查改为同时接受 HTML
+         `<a href>` 与 markdown 链接两种写法——右上角那行是 HTML，原来只认 `](README.zh-CN.md)` 会误报。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链接不变；两份文件头部只剩一行切换 + 两枚徽章。
+
+Cost     少一个语言入口，中文版只能从右上角进；徽章行由三枚变两枚。

@@ -8,9 +8,6 @@
 
 [![Ubuntu](https://img.shields.io/badge/running-Ubuntu%2026.04%20/%20GNOME%2050-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
 [![Focus](https://img.shields.io/badge/focus-Java%20backend%20%2B%20AI%20applications-4479A1?style=flat-square&logo=openjdk&logoColor=white)](https://spring.io/)
-[![Languages](https://img.shields.io/badge/docs-English%20%7C%20简体中文-lightgrey?style=flat-square)](README.md)
-
-**简体中文** · [English](README.md)
 
 </div>
 

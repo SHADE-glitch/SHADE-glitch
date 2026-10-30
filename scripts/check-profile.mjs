@@ -44,11 +44,14 @@ const fail = (m) => problems.push(m);
 
 // ---- 1. structure ----------------------------------------------------------
 // Two files, English first: README.md is the page the profile renders, README.zh-CN.md sits one
-// click away. Each must open with a switcher that points at the other file.
-if (!/\]\(README\.zh-CN\.md\)/.test(enMd)) {
+// click away. Each must open with a switcher that points at the other file — written as HTML
+// (`<a href="README.zh-CN.md">`) or as a markdown link, either form counts.
+const linksTo = (s, file) =>
+    s.includes(`href="${file}"`) || s.includes(`](${file})`);
+if (!linksTo(enMd, "README.zh-CN.md")) {
     fail("structure: README.md has no switcher link to README.zh-CN.md");
 }
-if (!/\]\(README\.md\)/.test(zhMd)) {
+if (!linksTo(zhMd, "README.md")) {
     fail("structure: README.zh-CN.md has no switcher link back to README.md");
 }
 
