@@ -195,3 +195,27 @@ Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链�
 Cost     首页少了一个已完结的项目，多了一个仍在开发中的项目——后者的 README 与指标还会变，§6 的互惠
          义务因此从「已冻结」变成「活文档」。守卫只比对集合，不比对行的顺序与描述文字，描述与徽章的
          准确性仍靠人核对。
+
+
+## D-011
+
+kind     chore
+
+Symptom  首页「Backend & AI applications」两行指向的主仓名，已经被主人改成了展示仓名：`Local-life-service-platform`
+         现名 `bendi-shenghuo-fuwu-pingtai`，`insight-agent` 现名 `yunying-guiyin-zhinengti`。上一轮 D-010
+         把这两个主仓名写进 README，链接实际靠 GitHub 重定向才没断；守卫也因此一直带着
+         `PRIVATE_ALLOWED` 这份「允许点名的私有仓」白名单——上一轮还把 `AI-Interview` 留在了里面，
+         而主人现在明确只要这两个项目，私有仓一个都不该被点名。
+
+Change   README 中英两侧的应用行改为 `bendi-shenghuo-fuwu-pingtai` 与 `yunying-guiyin-zhinengti`，
+         描述与徽章按主人给的文案与两仓技术栈重写；`AI-Interview`、`Local-life-service-platform`、
+         `insight-agent` 三个名字从首页移除。`AGENTS.md` §1 的「Public repositories only」改成
+         「本页只列公开仓，私有仓一律不点名」、§5 删掉 `PROFILE_TOKEN` 回退段、§6 的索引表同步换成
+         这两个仓名，并补一句「纯代码展示仓由私有源仓发布，互惠节写在源仓」。
+         `scripts/check-profile.mjs` 把 `PRIVATE_ALLOWED` 清空：任何非公开仓现在直接判失败，例外
+         必须先有主人的口头同意并在脚本里登记。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链接，rc=0。
+
+Cost     首页不再点名 `AI-Interview`，也不再点名两个源仓名；`AI-Interview` 仓本身未删除、未改动。
+         守卫的「不可见即私有」分支保留，但白名单为空，例外只存在于规则里而不是代码里。

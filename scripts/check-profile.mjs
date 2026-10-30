@@ -63,13 +63,10 @@ const all = [...new Set([...en, ...zh])].sort();
 if (all.length === 0) fail("mirror: no `github.com/SHADE-glitch/…` links found — the check would be vacuous");
 
 // ---- 3. links resolve + visibility -----------------------------------------
-// The only private repos the profile may name: the owner chose to disclose exactly these two. Every
-// other listed repo must be public — naming another private one needs the owner's spoken approval
-// first (see AGENTS.md). Enforced here, not merely asked for in prose.
-const PRIVATE_ALLOWED = new Set([
-    "AI-Interview-Practice-and-Feedback-System",
-    "Local-life-service-platform",
-]);
+// No private repo may be named: every listed repo must be public. Adding an exception needs the
+// owner's spoken approval first and a matching AGENTS.md change (see AGENTS.md §1). Enforced here,
+// not merely asked for in prose.
+const PRIVATE_ALLOWED = new Set([]);
 
 const ghUsable = (() => {
     try {
@@ -96,8 +93,8 @@ if (OFFLINE) {
             ).visibility;
         } catch {
             if (PRIVATE_ALLOWED.has(r)) {
-                warnings.push(`"${r}" is not visible to this token — expected for a whitelisted ` +
-                    `private repo; set the PROFILE_TOKEN CI secret (or run locally as the owner) to verify it`);
+                warnings.push(`"${r}" is not visible to this token — expected for the approved ` +
+                    `private exception; run the guard locally as the owner to verify it`);
             } else {
                 fail(`links: github.com/${OWNER}/${r} does not resolve (deleted, renamed, or never pushed)`);
             }

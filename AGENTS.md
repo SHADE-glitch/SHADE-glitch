@@ -26,11 +26,10 @@ machine: it ships no program — its one product is a front page. It deliberatel
 - **Identity ceiling.** "CS undergrad" is the finest granularity allowed: never add a school,
   graduation year, city, age, photo, email or phone number. Anything more specific needs the owner's
   explicit approval first.
-- **Public repositories only.** The profile lists **public** repos. The two backend / AI projects it
-  names (`Local-life-service-platform` and `insight-agent`) are public. **Every private repo is
-  off-limits: naming one (or its existence, description, or stack beyond what is already public)
-  requires the owner's explicit spoken approval first.** Never flip a repo to public just so it can be
-  listed — that is a privacy decision, not a profile edit.
+- **Public repositories only.** The profile lists **public** repos and nothing else. **Every private
+  repo is off-limits: naming one (or its existence, description, or stack beyond what is already
+  public) requires the owner's explicit spoken approval first.** Never flip a repo to public just so
+  it can be listed — that is a privacy decision, not a profile edit.
 
 ## 2. One file, two languages (this repo's exception)
 
@@ -82,8 +81,7 @@ Run the guard:
 
 It fails on (a) a missing `#en`/`#zh` anchor or switcher, (b) a repo listed in one language half but
 not the other, (c) a `github.com/SHADE-glitch/…` link that does not resolve, (d) a listed repo
-that is **not public** — the two whitelisted private repos are the only exception, and naming any
-*other* private repo is exactly what this check blocks — (e) an `AGENTS.md` §6 index whose repo
+that is **not public** — naming a private repo is exactly what this check blocks — (e) an `AGENTS.md` §6 index whose repo
 set no longer equals the README's (see §6), (f) a **badge that disagrees with the repo it points
 at** — the license badge vs that repo's `LICENSE`, the `GNOME Shell` badge vs `metadata.json`'s
 `shell-version` (a repo whose license GitHub cannot pin down, like the dual-licensed `macos-dock`,
@@ -95,18 +93,17 @@ pass `--offline` to skip them explicitly and loudly instead.
 
 **Automation.** `.github/workflows/profile.yml` runs the guard on every push and pull request, so a
 dead link or a mis-mirrored half cannot reach the front page. A CI token cannot see private repos, so
-by default the two whitelisted rows are reported as *unverifiable* (not dead). **Visibility fallback:**
-add a repository secret **`PROFILE_TOKEN`** — a fine-grained PAT with read access to those two repos
-(`gh secret set PROFILE_TOKEN -R SHADE-glitch/SHADE-glitch`) — and CI verifies them exactly like a
-local run; without the secret the workflow falls back to the default token and checks everything
-public. Run the guard locally, as the owner, to verify the private pair either way.
+the guard only checks public ones; every listed repo must be public, and a private name fails the
+check rather than hiding behind a token.
 
 ## 6. Where the obligations live (the reciprocal sections)
 
 Every fact this README states about a project **originates in that project's own repo**, so the duty
 to keep it true is written there, not here. Each listed repo carries a **"Listed on the GitHub
 profile"** section in its `AGENTS.md` — a short obligation list that points back to this file as the
-authoritative rulebook. A bilingual repo mirrors the same section in its `AGENTS.zh-CN.md`:
+authoritative rulebook. A bilingual repo mirrors the same section in its `AGENTS.zh-CN.md`. A
+code-only showcase is published from a private source repository; its section lives in the source
+repository, which also owns the facts the row states:
 
 | Repo |
 |---|
@@ -121,8 +118,8 @@ authoritative rulebook. A bilingual repo mirrors the same section in its `AGENTS
 | `copyous@local` |
 | `macos-dock@local` |
 | `fast-translate@local` |
-| `Local-life-service-platform` |
-| `insight-agent` |
+| `bendi-shenghuo-fuwu-pingtai` |
+| `yunying-guiyin-zhinengti` |
 
 When a repo is **added to** or **removed from** this README, add or remove its reciprocal section in
 the same round — the pair is what keeps the obligation discoverable from either side. `resume` and
