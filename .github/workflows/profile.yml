@@ -21,9 +21,8 @@ jobs:
           node-version: "20"
       - name: Check the README + AGENTS.md (structure, mirror, links, visibility, index)
         env:
-          # Visibility fallback for the private repos: a PAT (repo read) lets CI verify them too.
-          # If PROFILE_TOKEN is not set the secret is empty and this falls back to the default
-          # token, which can only see public repos — the private rows then report as "unverifiable",
-          # never dead. Set the secret to close that gap (see AGENTS.md).
-          GH_TOKEN: ${{ secrets.PROFILE_TOKEN || github.token }}
+          # Every listed repo must be public, so the default token sees them all. No PAT is needed:
+          # a repo the token cannot see fails the visibility check instead of hiding behind a secret
+          # (see AGENTS.md §1 and §5).
+          GH_TOKEN: ${{ github.token }}
         run: node scripts/check-profile.mjs
