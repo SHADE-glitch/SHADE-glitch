@@ -31,18 +31,19 @@ machine: it ships no program — its one product is a front page. It deliberatel
   public) requires the owner's explicit spoken approval first.** Never flip a repo to public just so
   it can be listed — that is a privacy decision, not a profile edit.
 
-## 2. One file, two languages (this repo's exception)
+## 2. Two files, English first (this repo's exception)
 
-Every other repo pairs two files (`README.md` ↔ `README.zh-CN.md`). The profile cannot — GitHub
-renders only `README.md` — so it is **one file with two halves**:
+Every other repo pairs two files (`README.md` ↔ `README.zh-CN.md`), and so does this one — with one
+difference GitHub imposes: **the profile page renders only `README.md`**, so English is the half a
+visitor lands on and the Chinese half sits one click away.
 
-- an **English** half first, opened by `<a id="en"></a>`, and
-- a **Chinese** half after, opened by `<a id="zh"></a>`,
-- each with a switcher (`English · **[简体中文](#zh)**` / `**简体中文** · [English](#en)`), using the
-  HTML anchors `#en` / `#zh`.
+- `README.md` — English, opened by the switcher `English | 简体中文`.
+- `README.zh-CN.md` — Chinese, opened by the same switcher.
+- Each switcher links to the **other file** (`README.zh-CN.md` / `README.md`). There are no `#en` /
+  `#zh` anchors: the pair is two files now, not two halves of one.
 
-**The two halves are one document and must stay mirrored** — same projects, same order, same links,
-same access labels. Editing one half without the other is a defect (the guard below catches it).
+**The two files are one document and must stay mirrored** — same projects, same order, same links,
+same access labels. Editing one without the other is a defect (the guard below catches it).
 
 ## 3. Content rules (truthfulness)
 
@@ -79,8 +80,8 @@ Run the guard:
 
     node scripts/check-profile.mjs
 
-It fails on (a) a missing `#en`/`#zh` anchor or switcher, (b) a repo listed in one language half but
-not the other, (c) a `github.com/SHADE-glitch/…` link that does not resolve, (d) a listed repo
+It fails on (a) a missing file or a switcher that does not point at the other language, (b) a repo
+listed in one language but not the other, (c) a `github.com/SHADE-glitch/…` link that does not resolve, (d) a listed repo
 that is **not public** — naming a private repo is exactly what this check blocks — (e) an `AGENTS.md` §6 index whose repo
 set no longer equals the README's (see §6), (f) a **badge that disagrees with the repo it points
 at** — the license badge vs that repo's `LICENSE`, the `GNOME Shell` badge vs `metadata.json`'s
@@ -92,7 +93,7 @@ is asserted too. Checks (a), (b), (e) and (g) read only the two committed files;
 pass `--offline` to skip them explicitly and loudly instead.
 
 **Automation.** `.github/workflows/profile.yml` runs the guard on every push and pull request, so a
-dead link or a mis-mirrored half cannot reach the front page. A CI token cannot see private repos, so
+dead link or a mis-mirrored copy cannot reach the front page. A CI token cannot see private repos, so
 the guard only checks public ones; every listed repo must be public, and a private name fails the
 check rather than hiding behind a token.
 

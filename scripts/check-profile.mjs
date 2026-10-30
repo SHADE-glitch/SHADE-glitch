@@ -2,14 +2,14 @@
 /**
  * check-profile.mjs — guards the GitHub profile README (`SHADE-glitch/SHADE-glitch`).
  *
- * The front page is a single `README.md`, so a dead link or a half-edited copy would ship straight
- * to github.com/SHADE-glitch. This is the command that catches it first — CI runs it on every push,
- * and you can run it locally. Six checks:
+ * The profile page is `README.md`, with `README.zh-CN.md` one click away, so a dead link or a
+ * half-edited copy would ship straight to github.com/SHADE-glitch. This is the command that catches
+ * it first — CI runs it on every push, and you can run it locally. Six checks:
  *
- *   1. structure — both HTML anchors (`<a id="en">`, `<a id="zh">`) and both switchers exist,
- *      so the page stays navigable and the two language halves stay delimited.
- *   2. mirror    — every `github.com/SHADE-glitch/<repo>` link in the English half also appears
- *      in the Chinese half and vice versa: the halves are one document.
+ *   1. structure — both files exist and each opens with a switcher that points at the other one,
+ *      so the page stays navigable from either language.
+ *   2. mirror    — every `github.com/SHADE-glitch/<repo>` link in `README.md` also appears in
+ *      `README.zh-CN.md` and vice versa: the two files are one document.
  *   3. links     — every referenced repo resolves on GitHub (via `gh repo view`). If `gh` is
  *      missing or unauthenticated the check REFUSES to pass — a pass over an unverified set
  *      proves nothing. Pass `--offline` to skip it explicitly and loudly instead.
@@ -35,27 +35,28 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OWNER = "SHADE-glitch";
 const OFFLINE = process.argv.includes("--offline");
 
-const md = readFileSync(path.join(ROOT, "README.md"), "utf8");
+const enMd = readFileSync(path.join(ROOT, "README.md"), "utf8");
+const zhMd = readFileSync(path.join(ROOT, "README.zh-CN.md"), "utf8");
+// Both files feed the link and badge checks; the mirror check below compares them to each other.
+const md = `${enMd}\n${zhMd}`;
 const problems = [];
 const fail = (m) => problems.push(m);
 
 // ---- 1. structure ----------------------------------------------------------
-const zhAt = md.indexOf('<a id="zh"');
-if (!md.includes('<a id="en"')) fail("structure: missing the English anchor `<a id=\"en\"></a>`");
-if (zhAt === -1) fail('structure: missing the Chinese anchor `<a id="zh"></a>`');
-if (!/\]\(#zh\)/.test(md)) fail("structure: no switcher link to `#zh`");
-if (!/\]\(#en\)/.test(md)) fail("structure: no switcher link to `#en`");
-
-// Split the halves at the Chinese anchor. If it is missing there is no Chinese half, and the
-// mirror check below reports every English repo as missing from it — the honest signal.
-const enHalf = zhAt === -1 ? md : md.slice(0, zhAt);
-const zhHalf = zhAt === -1 ? "" : md.slice(zhAt);
+// Two files, English first: README.md is the page the profile renders, README.zh-CN.md sits one
+// click away. Each must open with a switcher that points at the other file.
+if (!/\]\(README\.zh-CN\.md\)/.test(enMd)) {
+    fail("structure: README.md has no switcher link to README.zh-CN.md");
+}
+if (!/\]\(README\.md\)/.test(zhMd)) {
+    fail("structure: README.zh-CN.md has no switcher link back to README.md");
+}
 
 // ---- 2. mirror -------------------------------------------------------------
 const reposIn = (s) =>
     new Set([...s.matchAll(new RegExp(`github\\.com/${OWNER}/([A-Za-z0-9._-]+)`, "g"))].map((m) => m[1]));
-const en = reposIn(enHalf);
-const zh = reposIn(zhHalf);
+const en = reposIn(enMd);
+const zh = reposIn(zhMd);
 for (const r of en) if (!zh.has(r)) fail(`mirror: "${r}" is in the English half but not the Chinese half`);
 for (const r of zh) if (!en.has(r)) fail(`mirror: "${r}" is in the Chinese half but not the English half`);
 const all = [...new Set([...en, ...zh])].sort();
@@ -206,14 +207,14 @@ if (OFFLINE) {
 
 // ---- 6. AGENTS.md keeps its shape -------------------------------------------
 // The seven numbered sections are this repo's rulebook on a page: what it is, its hard boundaries,
-// the one-file / two-language exception, the content rules, the commit prefixes, how to verify, and
-// where the reciprocal obligations live. A later edit that drops, empties or renumbers one of them
+// the English-first / Chinese-second pair, the content rules, the commit prefixes, how to verify,
+// and where the reciprocal obligations live. A later edit that drops, empties or renumbers one of them
 // silently removes a rule — nothing else would notice, so the shape itself is asserted here. It
 // reads only the committed file, so unlike the `gh`-bound checks it runs everywhere, CI included.
 const REQUIRED_SECTIONS = [
     "0. What this repo is",
     "1. Hard boundaries",
-    "2. One file, two languages",
+    "2. Two files, English first",
     "3. Content rules",
     "4. Commits",
     "5. Verify before pushing",

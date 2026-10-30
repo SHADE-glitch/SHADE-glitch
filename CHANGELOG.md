@@ -287,3 +287,21 @@ Evidence `git status` → `M README.md`、`D assets/follow.svg`；README 顶部�
          三枚徽章；`node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链接不变。
 
 Cost     首页少一个关注入口。其余 shields 徽章仍是外链，camo 侧取不到时同样会断。
+
+## D-016
+
+kind     chore
+
+Symptom  首页一直是「一个 README.md 装两半」：英文在上、中文在下，靠 `#en` / `#zh` 锚点切换。AGENTS.md §2 把这件事
+         写成「profile 只能渲染 README.md，所以不能拆成两个文件」。结果是中文那半只能在同一页里往下滚，仓库文件列表里
+         看不到中文版，也和其他仓 `README.md` ↔ `README.zh-CN.md` 成对的习惯不一致。
+
+Change   拆成两份：`README.md` 英文、`README.zh-CN.md` 中文；各自首行是语言切换（指向对方文件），去掉 `#en` / `#zh`
+         锚点；两处 Languages 徽章改指对方文件；中文侧标题由 `##` 提升为 `#`。AGENTS.md §2 改写为「两文件、英文在前」，
+         §5 的守卫说明同步；`scripts/check-profile.mjs` 改为同时读两份文件（链接与徽章取并集），结构检查换成「各有指向
+         对方的切换链接」，§6 的必需章节名跟着改名。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链接与改动前完全一致；两份文件的仓库链接集合相同。
+
+Cost     个人页只渲染 `README.md`，首页看到的是英文版，中文版要多点一次（切换链接在首行）。旧锚点 `#zh` / `#en`
+         失效，外部若有人链到它们会落到页首。
