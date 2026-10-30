@@ -273,3 +273,17 @@ Evidence 改前：新静态 shields 地址的 camo → 504；已缓存的 Ubuntu
 
 Cost     徽章不再显示关注数，也不再随 shields 样式更新。其余 shields 徽章仍是外链，camo 侧取不到时同样会断，
          届时可按同一办法逐个自托管。
+
+## D-015
+
+kind     revert
+
+Symptom  D-014 把 Follow 徽章改成自托管之后，主人明确说这个徽章不需要。它本身也不带信息（关注数是 2），
+         却独占一行，压在 Ubuntu / Focus / Languages 三枚徽章前面。
+Change   删掉 README 中英两侧的 Follow 徽章行，并删除 D-014 新增的 `assets/follow.svg`（assets/ 随之清空）。
+         关注入口不另设，点头像或用户名进个人页即可。
+
+Evidence `git status` → `M README.md`、`D assets/follow.svg`；README 顶部只剩 Ubuntu / Focus / Languages
+         三枚徽章；`node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链接不变。
+
+Cost     首页少一个关注入口。其余 shields 徽章仍是外链，camo 侧取不到时同样会断。
