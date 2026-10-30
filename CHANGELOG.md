@@ -238,3 +238,21 @@ Evidence `curl` 旧地址 → 200 `image/svg+xml`（`Follow: 2`），说明服�
 
 Cost     关注数最多滞后 1 小时。若 shields 上游持续 429，这张图仍可能短暂断——要彻底避免只能换成
          不带 API 的静态徽章，代价是没有实时数字。
+
+## D-013
+
+kind     fix
+
+Symptom  D-012 换了 Follow 徽章地址并加了 `cacheSeconds`，但新地址在 GitHub 上依旧是断图：改完立刻抓页面，
+         新生成的 camo 链接返回 `504 Error Fetching Resource`。所以问题不在浏览器缓存，而在 GitHub 的
+         camo 取不到图——`img.shields.io/github/followers/...` 要回源调 GitHub API，未带 token 时既慢又会
+         429，超过 camo 的取图时限就 504。同页那些 `img.shields.io/badge/...` 静态徽章一直正常，正好印证。
+
+Change   Follow 徽章换成静态徽章 `badge/Follow-SHADE--glitch-181717`（带 GitHub logo），不再依赖任何上游
+         API；外观与点击目标不变，中英两侧各一处。
+
+Evidence 改前：新 camo 链接 → `504 Error Fetching Resource`（`Error Fetching Resource`，24 字节纯文本）；
+         `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链接不变。
+
+Cost     徽章不再显示关注数（当前 2）。统计区那两枚 Followers / Stars 仍是 API 徽章，同样可能在 camo 侧
+         504——它们目前靠已有缓存显示，将来断了就用同一办法换成静态徽章。
