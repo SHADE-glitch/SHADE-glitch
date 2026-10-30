@@ -219,3 +219,22 @@ Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链�
 
 Cost     首页不再点名 `AI-Interview`，也不再点名两个源仓名；`AI-Interview` 仓本身未删除、未改动。
          守卫的「不可见即私有」分支保留，但白名单为空，例外只存在于规则里而不是代码里。
+
+## D-012
+
+kind     fix
+
+Symptom  首页「Follow」徽章（中英两侧各一处）在 GitHub 上渲染成断图，而同页其他 shields 徽章正常。
+         原因是这张图走的是 `img.shields.io/github/followers/...`，服务端要回源调 GitHub API；
+         shields 未带 token 时这个端点容易 429，GitHub 的 camo 会把那次失败按图片 URL 缓存下来，
+         shields 恢复之后页面仍拿旧缓存，于是只有这一张坏。
+
+Change  两处 Follow 徽章地址追加 `&cacheSeconds=3600`。camo 的缓存键由 URL 派生，改 URL 即强制
+         重新取图；同时把 shields 的上游缓存从默认 300 秒拉到 1 小时，429 概率随之降一个量级。
+         徽章外观、文案与点击目标均不变。
+
+Evidence `curl` 旧地址 → 200 `image/svg+xml`（`Follow: 2`），说明服务端没坏、坏的是缓存；
+         改后 `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链接不变。
+
+Cost     关注数最多滞后 1 小时。若 shields 上游持续 429，这张图仍可能短暂断——要彻底避免只能换成
+         不带 API 的静态徽章，代价是没有实时数字。
