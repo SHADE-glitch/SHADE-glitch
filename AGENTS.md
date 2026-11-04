@@ -115,7 +115,7 @@ repository, which also owns the facts the row states:
 | `codebuddy-usage-tracker` |
 | `qoder-cn-usage-tracker` |
 | `trae-cn-usage-tracker` |
-| `AgentOS` |
+| `agent-os` |
 | `notification-grouper@local` |
 | `burn-my-windows@local` |
 | `copyous@local` |

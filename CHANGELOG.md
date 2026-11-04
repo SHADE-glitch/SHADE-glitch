@@ -320,3 +320,18 @@ Change   两份文件都只保留右上角切换（`<p align="right">`），删�
 Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，13 个仓库链接不变；两份文件头部只剩一行切换 + 两枚徽章。
 
 Cost     少一个语言入口，中文版只能从右上角进；徽章行由三枚变两枚。
+
+## D-018
+
+kind     chore
+
+Symptom  首页 AgentOS 行与 `AGENTS.md` §6 的反向索引都写着 `AgentOS`，而仓库已按命名规范改成 `agent-os`；
+         守卫要求 §6 的仓名集合与 README 链接逐一相等。
+
+Change   `README.md` / `README.zh-CN.md` 的 AgentOS 行三处链接改指 `SHADE-glitch/agent-os`，显示名仍写
+         **AgentOS**（产品名）；`AGENTS.md` §6 表格那一行改成 `agent-os`。
+
+Evidence `node scripts/check-profile.mjs --offline` → `PROFILE: PASS`（13 个仓库链接，集合含 `agent-os`）。
+
+Cost     无；旧链接靠 GitHub 重定向。
+
