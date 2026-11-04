@@ -335,3 +335,17 @@ Evidence `node scripts/check-profile.mjs --offline` → `PROFILE: PASS`（13 个
 
 Cost     无；旧链接靠 GitHub 重定向。
 
+
+## D-019
+
+kind     chore
+
+Symptom  仓库改名那轮（D-018）只同步了链接，`AGENTS.md` 里两处仍把私有知识库仓写成 `Notes`，而它已改名
+         `notes`；同一份文档里链接与正文对不上。
+
+Change   `AGENTS.md` §1 的「private `resume` / `notes` repos」与 §6 后的「`notes` are not listed」两处同步。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`（13 个仓库链接在线校验通过）。
+
+Cost     无。
+

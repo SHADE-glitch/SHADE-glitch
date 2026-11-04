@@ -21,7 +21,7 @@ machine: it ships no program — its one product is a front page. It deliberatel
 - **Self-contained.** The README must not depend on local-only files (`docs/reports/`, `~/…`) or any
   private content: a clone of this repo has to render correctly on its own.
 - **Pseudonymous identity only.** The owner is "SHADE-glitch / CS undergrad". Never add a real name,
-  contact, employer, school, location, or the contents of the private `resume` / `Notes` repos. A
+  contact, employer, school, location, or the contents of the private `resume` / `notes` repos. A
   link that would expose private content stays as `🔒 private — code available on request`.
 - **Identity ceiling.** "CS undergrad" is the finest granularity allowed: never add a school,
   graduation year, city, age, photo, email or phone number. Anything more specific needs the owner's
@@ -126,7 +126,7 @@ repository, which also owns the facts the row states:
 
 When a repo is **added to** or **removed from** this README, add or remove its reciprocal section in
 the same round — the pair is what keeps the obligation discoverable from either side. `resume` and
-`Notes` are **not** listed and carry no such section.
+`notes` are **not** listed and carry no such section.
 
 `scripts/check-profile.mjs` enforces this table: its repo set must equal the README's (the local
 extension installs are written here with their `@local` suffix — the guard strips it to compare
