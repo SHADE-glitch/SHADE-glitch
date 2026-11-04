@@ -349,3 +349,16 @@ Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`（13 个仓库链�
 
 Cost     无。
 
+
+## D-020
+
+kind     chore
+
+Symptom  `agent-os` 那一行的链接文字仍写 `AgentOS`（产品名），与其余 12 行的小写 slug 不一致，首页看起来像没改名。
+
+Change   两份 README 的链接文字改成 `agent-os`；链接目标不变。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`；13 行链接文字逐个小写。
+
+Cost     首页不再出现 `AgentOS` 这种品牌写法。
+
