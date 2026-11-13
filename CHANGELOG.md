@@ -362,3 +362,15 @@ Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`；13 行链接文�
 
 Cost     首页不再出现 `AgentOS` 这种品牌写法。
 
+
+---
+
+### D-021 · 2026-11-13 · chore
+
+Symptom   The two public showcase repositories were archived on GitHub, but the profile still listed them
+          as live projects; nothing on the page said the maintained copies are private.
+Change    Both rows now carry a 🗄️ archived marker and the page carries a one-line legend, in both
+          languages. The links stay — an archived showcase is still the public evidence.
+Evidence  `node scripts/check-profile.mjs` exits 0 (PROFILE: PASS; 13 repo links mirrored in both files).
+Cost      A reader who wants the maintained code still has to ask for the private repository; the page
+          cannot link it.
