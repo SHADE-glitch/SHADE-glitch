@@ -15,10 +15,10 @@
 
 ## 🧭 Focus
 
-Built and maintained 🛠️ end to end. Two directions: ☕ **backend / AI application engineering**
-(Java · Spring Boot · RAG · agent tool loops · async pipelines) and 🧰 **developer tooling** — a
-family of agent-usage trackers (🧮 aut · 🐾 cbut · 📊 ocut · 🎯 qcut), GNOME Shell extensions and
-a few utilities, mostly for everyday personal use.
+🛠️ Three groups, roughly: ☕ **backend / AI applications** — two showcase projects built while preparing
+for interviews (Java · Spring Boot · RAG · agent tool loops · async pipelines); 🧰 **open-source tools**
+— small tools for everyday personal use; 🪞 **GNOME Shell extensions** — also for personal use, some
+written from scratch and others forks continued on top of upstream.
 
 ## 📦 Projects
 

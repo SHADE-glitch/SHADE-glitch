@@ -393,3 +393,22 @@ Evidence `node scripts/check-profile.mjs --offline` → `PROFILE: PASS`，rc=0�
          措辞不在守卫检查范围内，链接可见性与徽章校验因 --offline 跳过（需 gh 联网复核）。
 
 Cost     首页不再说明私有维护副本与开发记录；`AGENTS.md` §1 的「CS undergrad」按 A 档保留，未改动。
+
+
+## D-023
+
+kind     taste
+
+Symptom  🧭 段写「从零构建并持续维护，两条主线」：GNOME 一节 5 行里只有 1 个原创、4 个是上游 fork 且已冻结，
+         页面另有 2 个已归档后端项目与 2 个已冻结 tracker，「从零」「持续维护」都不成立；「后端 / AI 应用工程」
+         实际只由那两个面试作品支撑，且「两条主线」与页面三节结构对不上（原句把 GNOME 塞进「开发者工具」）。
+
+Change   两份 README 的 🧭 段改为「大致三类」：后端 / AI 应用明说为面试准备时的两个展示作品，开源工具与
+         GNOME 扩展归为日常自用，并在扩展一项里点明「有从零写的，也有基于上游 fork 后自行调整的」；
+         删掉「从零构建并持续维护」与「两条主线」。其余段落、项目行、状态词不动。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，rc=0（13 个链接两份镜像，可见性与徽章校验通过，
+         `macos-dock` 的 NOASSERTION 按 §5 记为不可验证）；`git diff --check` 干净。
+
+Cost     🧭 段不再笼统宣称「持续维护」，也不再让「后端 / AI 应用工程」显得像在维护中的工程主线；
+         「面试」二字进入首屏方向段（项目行本就写明）。
