@@ -13,13 +13,12 @@
 
 ---
 
-## 🧭 What I do
+## 🧭 Focus
 
-I build things 🛠️ end to end and keep them maintained. Two directions: ☕ **backend / AI application
-engineering** (Java · Spring Boot · RAG · agent tool loops · async pipelines) and 🧰 **developer
-tooling** — a family of agent-usage trackers (🧮 aut · 🐾 cbut · 📊 ocut · 🎯 qcut), GNOME Shell
-extensions and utilities that make my own daily
-workflow 🔭 observable and a little faster.
+Built and maintained 🛠️ end to end. Two directions: ☕ **backend / AI application engineering**
+(Java · Spring Boot · RAG · agent tool loops · async pipelines) and 🧰 **developer tooling** — a
+family of agent-usage trackers (🧮 aut · 🐾 cbut · 📊 ocut · 🎯 qcut), GNOME Shell extensions and
+a few utilities, mostly for everyday personal use.
 
 ## 📦 Projects
 
@@ -27,12 +26,12 @@ workflow 🔭 observable and a little faster.
 
 | Project | What it does | Badges |
 | :--- | :--- | :---: |
-| 🍜 **[bendi-shenghuo-fuwu-pingtai](https://github.com/SHADE-glitch/bendi-shenghuo-fuwu-pingtai)** | 🍜 Dianping-style local-life platform as a 🧩 modular monolith: 🛡️ Redis cache guards, ⚡ a Lua + Redis-Stream seckill with zero oversell and one-order-per-user idempotency, 🔁 a CAS order state machine and 🏪 a merchant console with RBAC — ☕ Java 17 · Spring Boot 3.3 · MySQL 8 · Redis 7 · Vue 3 · 🗄️ **archived** — public showcase copy kept as evidence; development continues in a private repository | [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/) [![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)](https://redis.io/) [![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/) |
-| 🧭 **[yunying-guiyin-zhinengti](https://github.com/SHADE-glitch/yunying-guiyin-zhinengti)** | 🧭 Operational attribution agent for local-life data: 🧠 the model only proposes one drill-down dimension per step while 🛡️ thresholds, budgets and SQL guardrails stay in code; 📚 hybrid retrieval (pgvector HNSW + pg_trgm + RRF), 🧾 a three-part conclusion (facts / inferences / uncertainty) bound to the SQL behind it, and 🔒 a read-only database role — ☕ Java 17 · Spring Boot 3.5 · Spring AI · PostgreSQL 16 + pgvector · Vue 3 · 🗄️ **archived** — public showcase copy kept as evidence; development continues in a private repository | [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) [![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square)](https://spring.io/projects/spring-ai) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![pgvector](https://img.shields.io/badge/pgvector-HNSW-336791?style=flat-square&logo=postgresql&logoColor=white)](https://github.com/pgvector/pgvector) [![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/) |
-
-🗄️ `archived` marks a public showcase copy; the maintained repository is private, so the public link is frozen history.
+| 🍜 **[bendi-shenghuo-fuwu-pingtai](https://github.com/SHADE-glitch/bendi-shenghuo-fuwu-pingtai)** | 🍜 Dianping-style local-life platform as a 🧩 modular monolith: 🛡️ Redis cache guards, ⚡ a Lua + Redis-Stream seckill with zero oversell and one-order-per-user idempotency, 🔁 a CAS order state machine and 🏪 a merchant console with RBAC — ☕ Java 17 · Spring Boot 3.3 · MySQL 8 · Redis 7 · Vue 3 · 🗄️ **archived** — interview / job-search showcase project | [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/) [![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)](https://redis.io/) [![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/) |
+| 🧭 **[yunying-guiyin-zhinengti](https://github.com/SHADE-glitch/yunying-guiyin-zhinengti)** | 🧭 Operational attribution agent for local-life data: 🧠 the model only proposes one drill-down dimension per step while 🛡️ thresholds, budgets and SQL guardrails stay in code; 📚 hybrid retrieval (pgvector HNSW + pg_trgm + RRF), 🧾 a three-part conclusion (facts / inferences / uncertainty) bound to the SQL behind it, and 🔒 a read-only database role — ☕ Java 17 · Spring Boot 3.5 · Spring AI · PostgreSQL 16 + pgvector · Vue 3 · 🗄️ **archived** — interview / job-search showcase project | [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) [![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square)](https://spring.io/projects/spring-ai) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![pgvector](https://img.shields.io/badge/pgvector-HNSW-336791?style=flat-square&logo=postgresql&logoColor=white)](https://github.com/pgvector/pgvector) [![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/) |
 
 ### 🧰 Open-source tools
+
+A few tools built for everyday personal use, open-sourced along the way.
 
 | Project | What it does | Badges |
 | :--- | :--- | :---: |
@@ -45,7 +44,7 @@ workflow 🔭 observable and a little faster.
 
 ### 🪞❄️ GNOME Shell extensions
 
-❄️ Four upstream-frozen forks, maintained locally under their `@local` UUIDs — 🚫 no longer tracking upstream. Focus: 🐛 latent crashes, 💧 resource leaks, 🔋 idle power draw and 🧭 GNOME 45→50 adaptation.
+❄️ A few extensions for everyday personal use, adjusted to a personal desktop setup — the upstream baseline is frozen and 🚫 no longer tracking upstream.
 
 | Project | What it does | Badges |
 | :--- | :--- | :---: |
@@ -57,7 +56,7 @@ workflow 🔭 observable and a little faster.
 
 🧊 `frozen at upstream vX` pins the fork's upstream baseline; local fixes continue and the repository is **not archived**.
 
-## 🧪 Tech I use
+## 🧪 Tech stack
 
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://www.java.com/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)

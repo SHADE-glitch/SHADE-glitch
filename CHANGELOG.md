@@ -374,3 +374,22 @@ Change    Both rows now carry a 🗄️ archived marker and the page carries a o
 Evidence  `node scripts/check-profile.mjs` exits 0 (PROFILE: PASS; 13 repo links mirrored in both files).
 Cost      A reader who wants the maintained code still has to ask for the private repository; the page
           cannot link it.
+
+
+## D-022
+
+kind     taste
+
+Symptom  两个后端项目行写的是「公开展示副本 / 作为证据保留 / 开发转入私有仓」，节下还有一行注解明说
+         「维护中的仓是私有的、公开链接保留为冻结历史」——等于在首页点出另有私有仓继续开发；「我在做什么」
+         「我喜欢…」「我自己的工作流」也偏第一人称，小工具与 GNOME 两节听起来像正式维护的项目。
+
+Change   ① 两处项目行尾改为「面试 / 求职展示作品」，删掉整行注解；② 🧭 标题与正文去第一人称，把小工具 /
+         GNOME 归为「以日常自用为主」；③ 开源工具节与 GNOME 节各补一句含糊的个人使用说明，保留
+         `已归档` / `archived` / `冻结在上游 vX` / `🚫 不再跟随上游` 等状态词；④ 英文版同步对译，
+         `What I do` → `Focus`、`Tech I use` → `Tech stack`。两份文件同轮修改。
+
+Evidence `node scripts/check-profile.mjs --offline` → `PROFILE: PASS`，rc=0，13 个仓库链接两份镜像；
+         措辞不在守卫检查范围内，链接可见性与徽章校验因 --offline 跳过（需 gh 联网复核）。
+
+Cost     首页不再说明私有维护副本与开发记录；`AGENTS.md` §1 的「CS undergrad」按 A 档保留，未改动。

@@ -13,11 +13,11 @@
 
 ---
 
-## 🧭 我在做什么
+## 🧭 方向
 
-我喜欢把东西 🛠️ 从零做到能用，并且持续维护。两条主线：☕ **后端 / AI 应用工程**（Java · Spring Boot · RAG · Agent 工具循环 · 异步流水线）
-和 🧰 **开发者工具**——一整套 agent 用量追踪器（🧮 aut · 🐾 cbut · 📊 ocut · 🎯 qcut）、GNOME Shell
-扩展和一些小工具，让我自己的工作流 🔭 可观测、再快一点。
+🛠️ 从零构建并持续维护，两条主线：☕ **后端 / AI 应用工程**（Java · Spring Boot · RAG · Agent 工具循环 · 异步流水线）
+与 🧰 **开发者工具**——一整套 agent 用量追踪器（🧮 aut · 🐾 cbut · 📊 ocut · 🎯 qcut）、GNOME Shell
+扩展及若干小工具，以日常自用为主。
 
 ## 📦 项目
 
@@ -25,12 +25,12 @@
 
 | 项目 | 做什么 | 徽章 |
 | :--- | :--- | :---: |
-| 🍜 **[bendi-shenghuo-fuwu-pingtai](https://github.com/SHADE-glitch/bendi-shenghuo-fuwu-pingtai)** | 🍜 点评式本地生活平台，🧩 模块化单体：🛡️ Redis 缓存防护、⚡ Lua + Redis Stream 秒杀（零超卖 + 一人一单幂等）、🔁 CAS 订单状态机、🏪 带 RBAC 的商家后台——☕ Java 17 · Spring Boot 3.3 · MySQL 8 · Redis 7 · Vue 3 · 🗄️ **已归档** — 公开展示副本，作为证据保留；开发转入私有仓 | [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/) [![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)](https://redis.io/) [![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/) |
-| 🧭 **[yunying-guiyin-zhinengti](https://github.com/SHADE-glitch/yunying-guiyin-zhinengti)** | 🧭 本地生活数据运营归因 Agent：🧠 模型每步只提议一个下钻维度，🛡️ 贡献度阈值、预算与 SQL 护栏全部由代码裁决；📚 混合检索（pgvector HNSW + pg_trgm + RRF）、🧾 三段式结论（事实 / 推测 / 不确定）绑定到背后的 SQL、🔒 只读数据库账号 —— ☕ Java 17 · Spring Boot 3.5 · Spring AI · PostgreSQL 16 + pgvector · Vue 3 · 🗄️ **已归档** — 公开展示副本，作为证据保留；开发转入私有仓 | [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) [![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square)](https://spring.io/projects/spring-ai) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![pgvector](https://img.shields.io/badge/pgvector-HNSW-336791?style=flat-square&logo=postgresql&logoColor=white)](https://github.com/pgvector/pgvector) [![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/) |
-
-🗄️ `已归档` 表示这是公开展示副本；维护中的仓是私有的，公开链接保留为冻结历史。
+| 🍜 **[bendi-shenghuo-fuwu-pingtai](https://github.com/SHADE-glitch/bendi-shenghuo-fuwu-pingtai)** | 🍜 点评式本地生活平台，🧩 模块化单体：🛡️ Redis 缓存防护、⚡ Lua + Redis Stream 秒杀（零超卖 + 一人一单幂等）、🔁 CAS 订单状态机、🏪 带 RBAC 的商家后台——☕ Java 17 · Spring Boot 3.3 · MySQL 8 · Redis 7 · Vue 3 · 🗄️ **已归档** — 面试 / 求职展示作品 | [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/) [![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)](https://redis.io/) [![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/) |
+| 🧭 **[yunying-guiyin-zhinengti](https://github.com/SHADE-glitch/yunying-guiyin-zhinengti)** | 🧭 本地生活数据运营归因 Agent：🧠 模型每步只提议一个下钻维度，🛡️ 贡献度阈值、预算与 SQL 护栏全部由代码裁决；📚 混合检索（pgvector HNSW + pg_trgm + RRF）、🧾 三段式结论（事实 / 推测 / 不确定）绑定到背后的 SQL、🔒 只读数据库账号 —— ☕ Java 17 · Spring Boot 3.5 · Spring AI · PostgreSQL 16 + pgvector · Vue 3 · 🗄️ **已归档** — 面试 / 求职展示作品 | [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) [![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square)](https://spring.io/projects/spring-ai) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![pgvector](https://img.shields.io/badge/pgvector-HNSW-336791?style=flat-square&logo=postgresql&logoColor=white)](https://github.com/pgvector/pgvector) [![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/) |
 
 ### 🧰 开源与工具链
+
+一批平时自用的小工具，顺手开源。
 
 | 项目 | 做什么 | 徽章 |
 | :--- | :--- | :---: |
@@ -43,7 +43,7 @@
 
 ### 🪞❄️ GNOME Shell 扩展
 
-❄️ 四个冻结上游的分支，以各自的 `@local` UUID 在本地维护，🚫 不再跟随上游。主做 🐛 潜在崩溃、💧 资源泄漏、🔋 待机功耗 + 🧭 GNOME 45→50 适配。
+❄️ 几个日常自用、按个人桌面习惯调整的扩展；上游基线已冻结，🚫 不再跟随上游。
 
 | 项目 | 做什么 | 徽章 |
 | :--- | :--- | :---: |
