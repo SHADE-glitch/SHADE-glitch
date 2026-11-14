@@ -412,3 +412,24 @@ Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，rc=0（13 个链
 
 Cost     🧭 段不再笼统宣称「持续维护」，也不再让「后端 / AI 应用工程」显得像在维护中的工程主线；
          「面试」二字进入首屏方向段（项目行本就写明）。
+
+
+## D-024
+
+kind     taste
+
+Symptom  首屏与 GitHub profile chrome 仍停在旧口径：bio 写「Backend & AI application engineering」当主业，
+         README tagline 用 building / maintaining / on Ubuntu / GNOME 50 把三类东西又以第一人称列一遍，
+         `focus: Java backend + AI applications` 徽章宣称主方向——都与 D-022 / D-023 之后的「三类并列、
+         后端仅面试作品、工具自用」矛盾。`AGENTS.md` §3 要求不得与 chrome 矛盾，但守卫看不到 bio 与 pinned。
+
+Change   ① 两份 README 标题去掉 `Hi, I'm / 你好，我是`；② tagline 改为纯名词清单，工具在前、技术关键词在后，
+         删掉所有动词与个人运行环境；③ 删掉 `running Ubuntu 2026.04 / GNOME 50` 与
+         `focus: Java backend + AI applications` 两个徽章；④ 经授权用 `gh api -X PATCH user` 把 GitHub bio
+         同步为不含「主业」表述、点明两个面试作品的一句。pinned 六个仓不动（本就与新定位一致）。
+
+Evidence `node scripts/check-profile.mjs` → `PROFILE: PASS`，rc=0（13 个链接两份镜像，可见性与徽章校验通过）；
+         `git diff --check` 干净；`gh api user --jq .bio` 读回的新 bio 与两份 README 口径逐项一致。
+
+Cost     首屏不再宣称「持续维护 / 主方向」，不再暴露个人 Ubuntu 版本；`CS undergrad` 按 A 档保留，
+         `AGENTS.md` §1 未改动。bio 在仓外，守卫不覆盖，仍属 §3 的人工核对项。

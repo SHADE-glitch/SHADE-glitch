@@ -2,12 +2,9 @@
 
 <div align="center">
 
-# Hi, I'm SHADE-glitch 👋
+# SHADE-glitch 👋
 
-**CS undergrad** 🧑‍💻 · building ☕ Java & 🍃 Spring Boot backend and 🤖 AI apps (RAG · agents) · maintaining 🪞 GNOME Shell extensions 🔔🔥📋🍎 · building 🧰 a family of agent-usage trackers 📊🐾🎯🧮 · on 🐧 Ubuntu / GNOME 50
-
-[![Ubuntu](https://img.shields.io/badge/running-Ubuntu%2026.04%20/%20GNOME%2050-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
-[![Focus](https://img.shields.io/badge/focus-Java%20backend%20%2B%20AI%20applications-4479A1?style=flat-square&logo=openjdk&logoColor=white)](https://spring.io/)
+**CS undergrad** 🧑‍💻 · 🧰 usage trackers · 🪞 GNOME Shell extensions · ☕ Java · Spring Boot · 🤖 RAG / agents
 
 </div>
 
